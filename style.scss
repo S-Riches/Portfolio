@@ -1,0 +1,70 @@
+$font-family: "Courier New", Courier, monospace;
+
+.lightmode {
+    background-color: #f2f2f2;
+    color: #171717;
+    header {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        a {
+            font-size: large;
+            padding: 1%;
+            color: gray;
+            text-decoration: none;
+            font-family: $font-family;
+            &:hover {
+                color: darkgrey;
+                text-decoration: underline;
+            }
+        }
+        h1 {
+            padding-left: 1%;
+            padding-right: 1%;
+            display: inline;
+            font-family: $font-family;
+        }
+    }
+    main {
+        // reference class like this basically creates a container to put stuff in
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .container > div {
+            font-family: $font-family;
+            margin: 1%;
+            max-width: 100%;
+            width: 50%;
+            align-self: center;
+            height: auto;
+            // visual representation background-color: lightblue;
+        }
+        .imageBoxElement {
+            display: block;
+            flex-wrap: wrap;
+            align-self: center;
+        }
+        .imageBoxElement > img {
+            max-width: 100%;
+            width: 75%;
+            height: auto;
+        }
+        .imageBoxElement > figcaption {
+            font-size: medium;
+            font-family: $font-family;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+            font-family: $font-family;
+        }
+        p {
+            margin: 1%;
+            font-family: $font-family;
+        }
+    }
+}

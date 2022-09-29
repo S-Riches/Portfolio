@@ -1,0 +1,66 @@
+.lightmode {
+  background-color: #f2f2f2;
+  color: #171717;
+}
+.lightmode header {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+.lightmode header a {
+  font-size: large;
+  padding: 1%;
+  color: gray;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+}
+.lightmode header a:hover {
+  color: darkgrey;
+  text-decoration: underline;
+}
+.lightmode header h1 {
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline;
+  font-family: "Courier New", Courier, monospace;
+}
+.lightmode main .container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.lightmode main .container > div {
+  font-family: "Courier New", Courier, monospace;
+  margin: 1%;
+  max-width: 100%;
+  width: 50%;
+  align-self: center;
+  height: auto;
+}
+.lightmode main .imageBoxElement {
+  display: block;
+  flex-wrap: wrap;
+  align-self: center;
+}
+.lightmode main .imageBoxElement > img {
+  max-width: 100%;
+  width: 75%;
+  height: auto;
+}
+.lightmode main .imageBoxElement > figcaption {
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
+}
+.lightmode main img {
+  max-width: 100%;
+  height: auto;
+}
+.lightmode main h1 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.lightmode main p {
+  margin: 1%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
