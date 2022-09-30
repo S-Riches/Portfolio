@@ -19,23 +19,65 @@ $font-family: "Courier New", Courier, monospace;
             }
         }
         h1 {
+        }
+        .headerLink {
             padding-left: 1%;
             padding-right: 1%;
             display: inline;
             font-family: $font-family;
+            font-size: larger;
         }
     }
     main {
         // reference class like this basically creates a container to put stuff in
+        //code for the switch
+        .switch {
+            position: relative;
+            display: block;
+            margin-right: 5%;
+            margin-left: auto;
+            width: 50px;
+            height: 25px;
+            background-color: #ccc;
+            border: 2px solid #171717;
+            border-radius: 20%;
+        }
+        .slider {
+            display: inline-block;
+            background-color: #f2f2f2;
+            height: 17px;
+            width: 17px;
+            margin-top: 9%;
+            margin-left: 10%;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            border-radius: 50%;
+        }
+        .switch > input {
+            display: none;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+        .switch > input:checked + .slider {
+            -webkit-transform: translateX(140%);
+            -ms-transform: translateX(140%);
+            transform: translateX(140%);
+            background-color: #171717;
+        }
+        .flexBoxHolder > figure {
+            margin: 0;
+        }
         .container {
+            display: block;
             display: flex;
             flex-wrap: nowrap;
         }
         .container > div {
             font-family: $font-family;
             margin: 1%;
-            max-width: 100%;
             width: 50%;
+            max-width: 100%;
             align-self: center;
             height: auto;
             // visual representation background-color: lightblue;
@@ -47,14 +89,20 @@ $font-family: "Courier New", Courier, monospace;
         }
         .imageBoxElement > img {
             max-width: 100%;
-            width: 75%;
-            height: auto;
+            width: 100;
+            height: 10%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .imageBoxElement > figcaption {
+            text-align: center;
+            padding: 5%;
             font-size: medium;
             font-family: $font-family;
         }
         img {
+            border-radius: 5%;
             max-width: 100%;
             height: auto;
         }
@@ -64,7 +112,35 @@ $font-family: "Courier New", Courier, monospace;
         }
         p {
             margin: 1%;
+            font-size: x-large;
             font-family: $font-family;
+        }
+        .blockHeader {
+            border: 1px solid#171717;
+        }
+        .blockImg {
+            border: 1px solid #171717;
+        }
+        .blockInfo {
+            border: 1px solid #171717;
+        }
+        .programmerBlock {
+            position: relative;
+            background-color: #171717;
+            margin: 5%;
+            height: 600px;
+            width: auto;
+        }
+        .positionBlock {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+        .terminalText {
+            align-self: center;
+            color: #04f06a;
+            white-space: pre;
         }
     }
 }

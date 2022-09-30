@@ -18,21 +18,60 @@
   color: darkgrey;
   text-decoration: underline;
 }
-.lightmode header h1 {
+.lightmode header .headerLink {
   padding-left: 1%;
   padding-right: 1%;
   display: inline;
   font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+}
+.lightmode main .switch {
+  position: relative;
+  display: block;
+  margin-right: 5%;
+  margin-left: auto;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border: 2px solid #171717;
+  border-radius: 20%;
+}
+.lightmode main .slider {
+  display: inline-block;
+  background-color: #f2f2f2;
+  height: 17px;
+  width: 17px;
+  margin-top: 9%;
+  margin-left: 10%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.lightmode main .switch > input {
+  display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.lightmode main .switch > input:checked + .slider {
+  -webkit-transform: translateX(140%);
+  -ms-transform: translateX(140%);
+  transform: translateX(140%);
+  background-color: #171717;
+}
+.lightmode main .flexBoxHolder > figure {
+  margin: 0;
 }
 .lightmode main .container {
+  display: block;
   display: flex;
   flex-wrap: nowrap;
 }
 .lightmode main .container > div {
   font-family: "Courier New", Courier, monospace;
   margin: 1%;
-  max-width: 100%;
   width: 50%;
+  max-width: 100%;
   align-self: center;
   height: auto;
 }
@@ -43,14 +82,20 @@
 }
 .lightmode main .imageBoxElement > img {
   max-width: 100%;
-  width: 75%;
-  height: auto;
+  width: 100;
+  height: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .lightmode main .imageBoxElement > figcaption {
+  text-align: center;
+  padding: 5%;
   font-size: medium;
   font-family: "Courier New", Courier, monospace;
 }
 .lightmode main img {
+  border-radius: 5%;
   max-width: 100%;
   height: auto;
 }
@@ -60,7 +105,35 @@
 }
 .lightmode main p {
   margin: 1%;
+  font-size: x-large;
   font-family: "Courier New", Courier, monospace;
+}
+.lightmode main .blockHeader {
+  border: 1px solid #171717;
+}
+.lightmode main .blockImg {
+  border: 1px solid #171717;
+}
+.lightmode main .blockInfo {
+  border: 1px solid #171717;
+}
+.lightmode main .programmerBlock {
+  position: relative;
+  background-color: #171717;
+  margin: 5%;
+  height: 600px;
+  width: auto;
+}
+.lightmode main .positionBlock {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.lightmode main .terminalText {
+  align-self: center;
+  color: #04f06a;
+  white-space: pre;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
