@@ -127,7 +127,10 @@ $font-family: "Courier New", Courier, monospace;
         .programmerBlock {
             position: relative;
             background-color: #171717;
-            margin: 5%;
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 1%;
             height: 600px;
             width: auto;
         }
@@ -138,9 +141,18 @@ $font-family: "Courier New", Courier, monospace;
             justify-content: center;
         }
         .terminalText {
+            //TODO : make this text scale to screen size to make sure that it fits on mobile
             align-self: center;
             color: #04f06a;
             white-space: pre;
+        }
+        #gitHubLogo {
+            display: flex;
+            img {
+                width: 4%;
+                margin-left: 5%;
+                height: auto;
+            }
         }
     }
 }

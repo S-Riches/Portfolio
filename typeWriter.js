@@ -30,4 +30,26 @@ async function typeWriter() {
     }
 }
 
-typeWriter();
+//fades in the header element and GitHub logo to this page
+async function fadeIn() {
+    let header = document.getElementById("header");
+    let logo = document.getElementById("gitHubLogo");
+    let image = document.createElement("img");
+    // TODO : dynamically create this depending on the light/dark mode switch
+    image.setAttribute(
+        "src",
+        "https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png"
+    );
+    image.setAttribute("alt", "github link");
+    logo.appendChild(image);
+    logo.style.opacity = "0";
+    header.style.opacity = "0";
+    // wait until the text has been printed to screen
+    await typeWriter();
+    header.style.transition = "0.5s";
+    logo.style.transition = "0.5s";
+    header.style.opacity = "1";
+    logo.style.opacity = "1";
+}
+
+fadeIn();
