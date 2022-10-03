@@ -1,5 +1,6 @@
-$font-family: "Courier New", Courier, monospace;
-
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap");
+$font-family: "Inter Tight", sans-serif;
+// TODO only implement dark mode after the website is nearing completion
 .lightmode {
     background-color: #f2f2f2;
     color: #171717;
@@ -18,8 +19,6 @@ $font-family: "Courier New", Courier, monospace;
                 text-decoration: underline;
             }
         }
-        h1 {
-        }
         .headerLink {
             padding-left: 1%;
             padding-right: 1%;
@@ -29,8 +28,12 @@ $font-family: "Courier New", Courier, monospace;
         }
     }
     main {
+        .headText {
+            text-align: center;
+        }
         // reference class like this basically creates a container to put stuff in
         //code for the switch
+        //TODO switch needs better styling as it is ugly atm
         .switch {
             position: relative;
             display: block;
@@ -69,7 +72,6 @@ $font-family: "Courier New", Courier, monospace;
             margin: 0;
         }
         .container {
-            display: block;
             display: flex;
             flex-wrap: nowrap;
         }
@@ -80,7 +82,6 @@ $font-family: "Courier New", Courier, monospace;
             max-width: 100%;
             align-self: center;
             height: auto;
-            // visual representation background-color: lightblue;
         }
         .imageBoxElement {
             display: block;
@@ -101,7 +102,7 @@ $font-family: "Courier New", Courier, monospace;
             font-size: medium;
             font-family: $font-family;
         }
-        img {
+        #imageOfMe {
             border-radius: 5%;
             max-width: 100%;
             height: auto;
@@ -115,14 +116,24 @@ $font-family: "Courier New", Courier, monospace;
             font-size: x-large;
             font-family: $font-family;
         }
-        .blockHeader {
-            border: 1px solid#171717;
+        .block {
+            box-sizing: content-box;
+            max-width: 50%;
+            height: auto;
+            border-radius: 5%;
+            // placeholder for the colour pallette
+            background-color: #04f06a;
+            border: 1px solid black;
+            transition: 500ms ease-in-out;
+            .borderImg > img {
+                max-width: 100%;
+                box-sizing: border-box;
+                height: auto;
+                max-height: 100%;
+            }
         }
-        .blockImg {
-            border: 1px solid #171717;
-        }
-        .blockInfo {
-            border: 1px solid #171717;
+        .block:hover {
+            box-shadow: 3px 3px 40px #171717;
         }
         .programmerBlock {
             position: relative;
@@ -144,6 +155,7 @@ $font-family: "Courier New", Courier, monospace;
             //TODO : make this text scale to screen size to make sure that it fits on mobile
             align-self: center;
             color: #04f06a;
+            font-family: "Courier New", Courier, monospace;
             white-space: pre;
         }
         #gitHubLogo {

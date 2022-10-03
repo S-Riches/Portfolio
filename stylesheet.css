@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap");
 .lightmode {
   background-color: #f2f2f2;
   color: #171717;
@@ -12,7 +13,7 @@
   padding: 1%;
   color: gray;
   text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter Tight", sans-serif;
 }
 .lightmode header a:hover {
   color: darkgrey;
@@ -22,8 +23,11 @@
   padding-left: 1%;
   padding-right: 1%;
   display: inline;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter Tight", sans-serif;
   font-size: larger;
+}
+.lightmode main .headText {
+  text-align: center;
 }
 .lightmode main .switch {
   position: relative;
@@ -63,12 +67,11 @@
   margin: 0;
 }
 .lightmode main .container {
-  display: block;
   display: flex;
   flex-wrap: nowrap;
 }
 .lightmode main .container > div {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter Tight", sans-serif;
   margin: 1%;
   width: 50%;
   max-width: 100%;
@@ -92,30 +95,39 @@
   text-align: center;
   padding: 5%;
   font-size: medium;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter Tight", sans-serif;
 }
-.lightmode main img {
+.lightmode main #imageOfMe {
   border-radius: 5%;
   max-width: 100%;
   height: auto;
 }
 .lightmode main h1 {
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter Tight", sans-serif;
 }
 .lightmode main p {
   margin: 1%;
   font-size: x-large;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter Tight", sans-serif;
 }
-.lightmode main .blockHeader {
-  border: 1px solid #171717;
+.lightmode main .block {
+  box-sizing: content-box;
+  max-width: 50%;
+  height: auto;
+  border-radius: 5%;
+  background-color: #04f06a;
+  border: 1px solid black;
+  transition: 500ms ease-in-out;
 }
-.lightmode main .blockImg {
-  border: 1px solid #171717;
+.lightmode main .block .borderImg > img {
+  max-width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  max-height: 100%;
 }
-.lightmode main .blockInfo {
-  border: 1px solid #171717;
+.lightmode main .block:hover {
+  box-shadow: 3px 3px 40px #171717;
 }
 .lightmode main .programmerBlock {
   position: relative;
@@ -136,6 +148,7 @@
 .lightmode main .terminalText {
   align-self: center;
   color: #04f06a;
+  font-family: "Courier New", Courier, monospace;
   white-space: pre;
 }
 .lightmode main #gitHubLogo {
