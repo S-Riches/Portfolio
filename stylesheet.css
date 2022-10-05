@@ -63,44 +63,85 @@
   transform: translateX(140%);
   background-color: #171717;
 }
-.lightmode main .flexBoxHolder > figure {
-  margin: 0;
-}
-.lightmode main .container {
+.lightmode main .sideBySidePicText {
   display: flex;
-  flex-wrap: nowrap;
-}
-.lightmode main .container > div {
-  font-family: "Inter Tight", sans-serif;
-  margin: 1%;
-  width: 50%;
-  max-width: 100%;
-  align-self: center;
-  height: auto;
-}
-.lightmode main .imageBoxElement {
-  display: block;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1vw;
   flex-wrap: wrap;
-  align-self: center;
 }
-.lightmode main .imageBoxElement > img {
-  max-width: 100%;
-  width: 100;
-  height: 10%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.lightmode main .imageBoxElement > figcaption {
+.lightmode main .textPanel {
+  max-width: 50vw;
   text-align: center;
-  padding: 5%;
-  font-size: medium;
-  font-family: "Inter Tight", sans-serif;
+  justify-content: center;
+  align-self: center;
 }
 .lightmode main #imageOfMe {
   border-radius: 5%;
-  max-width: 100%;
+  max-width: 40vw;
   height: auto;
+}
+.lightmode main .container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.lightmode main .container > div {
+  flex-basis: 45vw;
+}
+.lightmode main .block {
+  margin: 1vw;
+  border-radius: 5%;
+  background-color: #04f06a;
+  border: 1px solid black;
+  transition: 500ms ease-in-out;
+}
+.lightmode main .block .borderImg > img {
+  max-width: 45vw;
+}
+@media screen and (max-width: 768px) {
+  .lightmode main #imageOfMe {
+    max-width: 90vw;
+    margin: 1vw;
+  }
+  .lightmode main .textPanel {
+    max-width: 100vw;
+  }
+  .lightmode main .block .borderImg > img {
+    max-width: 98vw;
+  }
+}
+.lightmode main .block:hover {
+  box-shadow: 3px 3px 40px #171717;
+}
+.lightmode main .flexBoxHolder {
+  box-sizing: border-box;
+  display: flex;
+}
+.lightmode main .flexBoxHolderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.lightmode main .flexBoxHolder > figure {
+  margin: 0;
+}
+.lightmode main .imageBoxElement {
+  align-items: center;
+  padding: 2vw;
+}
+.lightmode main .imageBoxElement > img {
+  max-width: 10vw;
+  max-height: 10vw;
+}
+.lightmode main .imageBoxElement > figcaption {
+  text-align: center;
+  max-width: 15vw;
+  padding: 5%;
+  font-size: 1rem;
+  font-family: "Inter Tight", sans-serif;
 }
 .lightmode main h1 {
   text-align: center;
@@ -110,24 +151,6 @@
   margin: 1%;
   font-size: x-large;
   font-family: "Inter Tight", sans-serif;
-}
-.lightmode main .block {
-  box-sizing: content-box;
-  max-width: 50%;
-  height: auto;
-  border-radius: 5%;
-  background-color: #04f06a;
-  border: 1px solid black;
-  transition: 500ms ease-in-out;
-}
-.lightmode main .block .borderImg > img {
-  max-width: 100%;
-  box-sizing: border-box;
-  height: auto;
-  max-height: 100%;
-}
-.lightmode main .block:hover {
-  box-shadow: 3px 3px 40px #171717;
 }
 .lightmode main .programmerBlock {
   position: relative;
@@ -148,6 +171,7 @@
 .lightmode main .terminalText {
   align-self: center;
   color: #04f06a;
+  font-size: 3vw;
   font-family: "Courier New", Courier, monospace;
   white-space: pre;
 }
@@ -155,7 +179,7 @@
   display: flex;
 }
 .lightmode main #gitHubLogo img {
-  width: 4%;
+  width: 10vw;
   margin-left: 5%;
   height: auto;
 }

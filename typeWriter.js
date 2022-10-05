@@ -20,7 +20,7 @@ async function typeWriter() {
     const text = `_let name = {
         firstName : "Sam",
         lastName : "Riches",
-        jobTitle : "Junior Software developer"
+        jobTitle : "Junior Software Dev"
     };`;
     let outStr = "";
     for (let i = 0; i < text.length; i++) {
