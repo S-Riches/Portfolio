@@ -101,7 +101,7 @@ $font-family: "Inter Tight", sans-serif;
             border-radius: 5%;
             // placeholder for the colour pallette
             background-color: #04f06a;
-            border: 1px solid black;
+            // border: 1px solid black;
             transition: 500ms ease-in-out;
             .borderImg > img {
                 max-width: 45vw;
@@ -155,7 +155,63 @@ $font-family: "Inter Tight", sans-serif;
             font-size: 1rem;
             font-family: $font-family;
         }
-        h1 {
+        .experienceBlockHolder {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .titleAndPicture {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            > img {
+                max-width: 20vw;
+                max-height: 20vh;
+            }
+        }
+        // hides the experience blocks
+        #experience0 {
+            opacity: 0;
+            display: none;
+        }
+        #experience1 {
+            opacity: 0;
+            display: none;
+        }
+        #experience2 {
+            display: none;
+            opacity: 0;
+        }
+        // only activates the targeted one
+        #experience0:target {
+            display: flex;
+            transition: 0.5s ease-in-out;
+            opacity: 1;
+        }
+        #experience1:target {
+            display: flex;
+            transition: 0.5s ease-in-out;
+            opacity: 1;
+        }
+        #experience2:target {
+            display: flex;
+            transition: 0.5s ease-in-out;
+            opacity: 1;
+        }
+        .controls {
+            // need to get current element, then add one or subtract one?
+        }
+        .experienceBlock {
+            flex-direction: column;
+            justify-content: center;
+            width: 50vw;
+            padding: 1vw;
+            background-color: #04f06a;
+            // border: 1px solid black;
+            border-radius: 50px;
+        }
+        h1,
+        h2 {
             text-align: center;
             font-family: $font-family;
         }
