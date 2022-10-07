@@ -6,19 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="stylesheet.css" />
         <title>Portfolio</title>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="dropdown.js"></script>
+        <script src="theme.js"></script>
     </head>
-    <body class="lightmode">
-        <header>
+    <body class="lightMode">
+        <header id="header">
             <a href="about.html">About</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="index.html" class="headerLink">Sam J Riches</a>
             <a href="experience.html#experience0">Experience</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
+        </header>
+        <header class="mobileHeader">
+            <a href="index.html" class="headerLinkMobile">Sam J Riches </a>
+            <ion-icon
+                id="dropDown"
+                onclick="dropDownMenu()"
+                name="caret-down"
+            ></ion-icon>
+            <div class="links" id="links">
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="experience.html#experience0">Experience</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </header>
         <main>
             <div class="switch">
                 <!-- use a checkbox to tell when the button is clicked -->
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" onchange="changeTheme()" />
                 <label class="slider" for="checkbox"></label>
             </div>
             <h1>My Portfolio</h1>
@@ -44,17 +68,22 @@
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            Movie Database, as the name states, is a full stack
+                            application utilizing Python for the backend with
+                            Flask, MySQL for the database and Bootstrap 5 &
+                            Vanilla JavaScript for the frontend. The project is
+                            ran using docker containers that work in parallel to
+                            scrape movies from NowTV, Prime Video, and All4. The
+                            data is then stored in the database, and accessible
+                            through the client i wrote. The API also has a cron
+                            job built in so that it re-scrapes the sites and
+                            prunes the database of old movies at 10pm.
                         </p>
                     </div>
                 </div>
                 <div class="block">
                     <div class="blockHeader">
-                        <h1>Dads website</h1>
+                        <h1>Dads Website</h1>
                     </div>
                     <div class="borderImg">
                         <img
@@ -64,11 +93,16 @@
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            Dads Website is a website i built for my dads
+                            business - for this i simply used bootstrap 5 to
+                            create a responsive design which met his
+                            requirements for the website. It contains a carousel
+                            of before and after photos of clearances my dad had
+                            done, along with an embed of his waste carrier
+                            licenses that users could then click to verify. The
+                            website also had buttons at the bottom that would
+                            allow you to quickly send an email, or call him for
+                            a quote.
                         </p>
                     </div>
                 </div>
@@ -86,31 +120,38 @@
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            The League API project is the project i worked on
+                            during my work experience at Wizard Group. It uses
+                            the C# .NET framework to make a call to the Riot
+                            API, with the users name, the api then gets the user
+                            id and comes back with the users match History.
+                            Unlike the Movie Database, it follows the MVC model
+                            (model view controller). However during this time
+                            that i worked on this project due to it being a bank
+                            holiday on the friday at the end of the week i never
+                            go around to creating the frontend, therefore this
+                            project requires postman to work.
                         </p>
                     </div>
                 </div>
                 <div class="block">
                     <div class="blockHeader">
-                        <h1>To-Do Website</h1>
+                        <h1>codeBlogs;</h1>
                     </div>
                     <div class="borderImg">
                         <img
-                            src="https://d3u51sju9fqs0s.cloudfront.net/todo.gif"
-                            alt="to do website"
+                            src="https://d3u51sju9fqs0s.cloudfront.net/codeBlogs.gif"
+                            alt="code blogs"
                         />
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            During my time at JustIT's software development boot
+                            camp i created a mockup site called codeBlogs; for
+                            the first week of CSS. while the site has no
+                            functionality, it does have quite a clean look to it
+                            and is responsive. while i plan to create a blog
+                            website, im not sure if i will use this design.
                         </p>
                     </div>
                 </div>
@@ -118,21 +159,23 @@
             <div class="container">
                 <div class="block">
                     <div class="blockHeader">
-                        <h1>File autoSorter</h1>
+                        <h1>Download Folder Sorter</h1>
                     </div>
                     <div class="borderImg">
                         <img
                             src="https://d3u51sju9fqs0s.cloudfront.net/autosort.gif"
-                            alt="file auto sorting"
+                            alt="Download Folder Sorter"
                         />
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            The Download Folder Sorter was a project i created
+                            due to my downloads folder getting really
+                            unorganized. So my solution was to create an
+                            algorithm that views each file, looks at the file
+                            type and sorts it into a respective folder. This
+                            simple Python file uses the Shutil library and
+                            TKInter for a nice UI that serves its purpose.
                         </p>
                     </div>
                 </div>
@@ -148,11 +191,61 @@
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            One of my final units at college was to create an
+                            application in Java for children. So i created an
+                            application called 'Mentally Maths' - the concept of
+                            the game is quite simple really: allow a user to
+                            choose a difficulty level (two with a timer), give
+                            multiple choice answers, and inform the user through
+                            sounds if they were correct or incorrect. Due to me
+                            finishing the base program before the submission
+                            deadline - i added a timer bar that shows the user
+                            how much time they have left for each question.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="block">
+                    <div class="blockHeader">
+                        <h1>College Website (Shopping Mall Map)</h1>
+                    </div>
+                    <div class="borderImg">
+                        <img
+                            src="https://d3u51sju9fqs0s.cloudfront.net/collegesite2eb.gif"
+                            alt="College Website (Shopping Mall Map)"
+                        />
+                    </div>
+                    <div class="blockInfo">
+                        <p>
+                            Another project i did at college was a Map for a
+                            fictional shopping centre, which simply showed the
+                            user where shops, toilets, restaurants, etc. could
+                            be located within the AMAP shopping centre. The
+                            project used Bootstrap 5.
+                        </p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="blockHeader">
+                        <h1>To-Do Website</h1>
+                    </div>
+                    <div class="borderImg">
+                        <img
+                            src="https://d3u51sju9fqs0s.cloudfront.net/todo.gif"
+                            alt="to do website"
+                        />
+                    </div>
+                    <div class="blockInfo">
+                        <p>
+                            The To-Do Website was the first time i looked into
+                            web development - it is a very cookie cutter website
+                            that you see most people create at one point or
+                            another. it displays the time to the user, it has a
+                            delete feature for each todo object, and it has a
+                            alternating pattern for each item on the list to
+                            make it easier to see different items without the
+                            need for borders
                         </p>
                     </div>
                 </div>
@@ -170,11 +263,13 @@
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            One of the first notable python apps i made was this
+                            video downloader using Pytube, however as seen from
+                            the gif above, the app needs some updating to get
+                            going again. It uses TKInter to show a GUI to the
+                            user, and it gave feedback after the file was
+                            downloaded. I also created a random string generator
+                            to create a title for the file.
                         </p>
                     </div>
                 </div>
@@ -190,16 +285,16 @@
                     </div>
                     <div class="blockInfo">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dignissimos possimus magnam ab ea, dolorem
-                            quisquam ducimus, rerum, veritatis modi deleniti
-                            minus vero voluptates? Vitae illum, ipsa fugiat odit
-                            id repellat!
+                            Earlier this year i tasked myself with learning the
+                            fundamentals of C++, which then led me to create
+                            this Vending machine application, which is a simple
+                            proof of concept more than anything.
                         </p>
                     </div>
                 </div>
                 <!-- TODO : get unity games gifs -->
             </div>
         </main>
+        <script src="theme.js"></script>
     </body>
 </html>

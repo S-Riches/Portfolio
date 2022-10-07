@@ -6,19 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="stylesheet.css" />
         <title>intro page</title>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="dropdown.js"></script>
+        <script src="theme.js"></script>
     </head>
-    <body class="lightmode">
+    <body class="lightMode">
         <header id="header">
             <a href="about.html">About</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="index.html" class="headerLink">Sam J Riches</a>
             <a href="experience.html#experience0">Experience</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
+        </header>
+        <header class="mobileHeader">
+            <a href="index.html" class="headerLinkMobile">Sam J Riches </a>
+            <ion-icon
+                id="dropDown"
+                onclick="dropDownMenu()"
+                name="caret-down"
+            ></ion-icon>
+            <div class="links" id="links">
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="experience.html#experience0">Experience</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </header>
         <main>
             <div class="switch">
                 <!-- use a checkbox to tell when the button is clicked -->
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" onchange="changeTheme()" />
                 <label class="slider" for="checkbox"></label>
             </div>
             <div class="programmerBlock" id="programmerBlock">
@@ -29,5 +53,6 @@
             <a id="gitHubLogo" href="https://github.com/S-Riches/Portfolio"></a>
             <script src="typeWriter.js"></script>
         </main>
+        <script src="theme.js"></script>
     </body>
 </html>

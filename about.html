@@ -6,68 +6,110 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="stylesheet.css" />
         <title>Portfolio</title>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="dropdown.js"></script>
     </head>
-    <!-- TODO:  create a script to allow the user to change between dark and light mode -->
-    <body class="lightmode">
-        <header>
-            <a href="index.html">About</a>
+    <body class="lightMode">
+        <header id="header">
+            <a href="about.html">About</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="index.html" class="headerLink">Sam J Riches</a>
             <a href="experience.html#experience0">Experience</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
+        </header>
+        <header class="mobileHeader">
+            <a href="index.html" class="headerLinkMobile">Sam J Riches </a>
+            <ion-icon
+                id="dropDown"
+                onclick="dropDownMenu()"
+                name="caret-down"
+            ></ion-icon>
+            <div class="links" id="links">
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="experience.html#experience0">Experience</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </header>
         <main>
             <div class="switch">
                 <!-- use a checkbox to tell when the button is clicked -->
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" onchange="changeTheme()" />
                 <label class="slider" for="checkbox"></label>
             </div>
-            <h1>Me</h1>
             <!-- grid -->
             <div class="sideBySidePicText">
                 <div>
                     <!-- image of me -->
                     <img
                         id="imageOfMe"
-                        src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg"
+                        src="https://d33k2b40n3olse.cloudfront.net/me.jpg"
                     />
                 </div>
                 <div>
+                    <h1 class="aboutTitle">Hello!</h1>
                     <p class="textPanel">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Consequuntur voluptatibus reiciendis similique et
-                        voluptatum molestias fuga corrupti, quas incidunt soluta
-                        explicabo? Tempore quam aperiam tenetur. Ipsam vitae
-                        accusamus ut illum aliquam, minima itaque. Eius
-                        reprehenderit adipisci in omnis sed. Nihil repudiandae
-                        ad animi, et consectetur unde rerum accusantium,
-                        corrupti obcaecati totam fugit accusamus! Nostrum
-                        similique velit quae! Mollitia qui illo eos modi,
-                        voluptate tempore provident ducimus est porro alias
-                        perspiciatis perferendis odit id. Repellendus aut
-                        obcaecati, nihil libero eaque id alias dolore hic
-                        quisquam! Eaque, nemo atque vitae laudantium repellat
-                        eos quas ut, unde mollitia voluptatum quam iure adipisci
-                        aut?
+                        My name is Sam and im a (mostly) self taught software
+                        developer.
+                        <br />
+                        I've been interested in programming since secondary
+                        school where i studied computer science. During my GCSEs
+                        i used Python to write code, and learnt problem solving
+                        techniques such as pseudocode and flowcharts - both of
+                        which i still use to this day when creating complex
+                        projects.
+                    </p>
+                    <p class="textPanel">
+                        I have a burning passion for programming as it is my
+                        hobby first and foremost and a good creative outlet for
+                        me. Now that im older with more experience with
+                        programming, im interested in entering the full stack
+                        development space - due to my interest and enjoyment
+                        using multiple languages in parallel to achieve a
+                        solution.
                     </p>
                 </div>
             </div>
             <div>
-                <h1>More info</h1>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Earum est odit voluptates tenetur unde fuga, quam impedit
-                    vel repellat maxime aliquid? Perferendis ea quaerat,
-                    corporis dolorem ipsa illo tempora eos sapiente qui facere
-                    doloribus pariatur. Modi recusandae nesciunt reprehenderit,
-                    in totam iure tenetur. Sapiente veniam id corporis est
-                    expedita neque adipisci recusandae harum voluptatem maiores
-                    at in ratione, ab fuga excepturi architecto. Excepturi,
-                    voluptatum. Facere incidunt id at voluptatibus? Harum,
-                    inventore ex architecto quae animi eum quibusdam aliquam cum
-                    assumenda. Quisquam delectus eos explicabo velit corporis
-                    hic laboriosam eaque iste, accusamus quis? Minus dicta,
-                    ipsam expedita laudantium doloribus ea optio.
+                <h1>More about me</h1>
+                <p class="moreAboutMeText">
+                    Throughout the years ive picked up and put down some
+                    technology, sometimes out of change of interest or for
+                    education. For example i used to create small games in unity
+                    back in 2019 during my summer holidays- but i changed
+                    interest after i started college to making more systems and
+                    web based applications. I also picked up java for a college
+                    unit of mine (where i created the Mentally Maths app), while
+                    i like working with Java i found that C# would work a lot
+                    better for what i was interested in doing. The most recent
+                    example of me putting down some tech has been my adoption of
+                    linux (in the flavour of ubuntu) as it helps me keep focused
+                    and avoid distraction for when i want to create something,
+                    or to work on something pre-existing.
+                </p>
+                <p class="moreAboutMeText">
+                    As Programming is my hobby - when im not using VSCode to
+                    create something i like to research topics through the
+                    internet, or through books. Currently im 50 pages into Clean
+                    Code by Robert C. Martin, and i have the Pragmatic
+                    Programmer by Andrew Hunt & David Thomas to read next.
+                </p>
+                <p class="moreAboutMeText">
+                    Outside of the Terminal, some of my hobbies include cooking,
+                    learning french, binging series on streaming sites and
+                    sometimes gaming.
+                </p>
+                <p class="moreAboutMeText">
+                    I love using Git and GitHub to share code with whoever wants
+                    to see my work (please see either the portfolio page or the
+                    contact page).
                 </p>
             </div>
             <h1>Tech i use</h1>
@@ -77,128 +119,195 @@
                         <!-- images displayed in a row of eight blocks that resize for mobile -->
                         <!-- TODO : make these easier to look at and also make them more fit to the theme once i implement the theme -->
                         <!-- TODO : add links to each -->
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png"
-                                alt="Github"
-                            />
-                            <figcaption>GitHub</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
-                                alt="VSCode"
-                            />
-                            <figcaption>VSCode</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
-                                alt="JavaScript"
-                            />
-                            <figcaption>JavaScript</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png"
-                                alt="Linux"
-                            />
-                            <figcaption>Linux</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-                                alt="Git"
-                            />
-                            <figcaption>Git</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
-                                alt="Docker"
-                            />
-                            <figcaption>Docker</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
-                                alt="Python"
-                            />
-                            <figcaption>Python</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png"
-                                alt="MySQL"
-                            />
-                            <figcaption>MySQL Database</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://seeklogo.com/images/F/flask-logo-44C507ABB7-seeklogo.com.png"
-                                alt="Flask"
-                            />
-                            <figcaption>Flask</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://cdn4.iconfinder.com/data/icons/iconsimple-programming/512/html-512.png"
-                                alt="HTML 5"
-                            />
-                            <figcaption>HTML 5</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
-                                alt="CSS"
-                            />
-                            <figcaption>CSS 3</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png"
-                                alt="C#"
-                            />
-                            <figcaption>C-Sharp</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/2048px-Microsoft_.NET_logo.svg.png"
-                                alt=".NET"
-                            />
-                            <figcaption>.NET</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png"
-                                alt="SaSS"
-                            />
-                            <figcaption>SaSS (SCSS)</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
-                                alt="Bootstrap-5"
-                            />
-                            <figcaption>Bootstrap 5</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://cdn.worldvectorlogo.com/logos/microsoft-windows-11.svg"
-                                alt="Windows 11"
-                            />
-                            <figcaption>Windows 11 and Prior</figcaption>
-                        </div>
-                        <div class="imageBoxElement">
-                            <img
-                                src="https://e7.pngegg.com/pngimages/346/81/png-clipart-macos-sierra-os-x-mavericks-apple-angle-logo.png"
-                                alt="MacOS"
-                            />
-                            <figcaption>Mac OS</figcaption>
-                        </div>
+
+                        <a class="blockLink" href="https://www.github.com/">
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png"
+                                    alt="Github"
+                                />
+                                <figcaption>GitHub</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://code.visualstudio.com/"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
+                                    alt="VSCode"
+                                />
+                                <figcaption>VSCode</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                                    alt="JavaScript"
+                                />
+                                <figcaption>JavaScript</figcaption>
+                            </div>
+                        </a>
+                        <a href="https://ubuntu.com/" class="blockLink">
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png"
+                                    alt="Linux"
+                                />
+                                <figcaption>Linux</figcaption>
+                            </div>
+                        </a>
+                        <a href="https://git-scm.com/" class="blockLink">
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                                    alt="Git"
+                                />
+                                <figcaption>Git</figcaption>
+                            </div>
+                        </a>
+                        <a href="https://www.docker.com/" class="blockLink">
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
+                                    alt="Docker"
+                                />
+                                <figcaption>Docker</figcaption>
+                            </div>
+                        </a>
+                        <a href="https://www.python.org/" class="blockLink">
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+                                    alt="Python"
+                                />
+                                <figcaption>Python</figcaption>
+                            </div>
+                        </a>
+                        <a href="https://www.mysql.com/" class="blockLink">
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png"
+                                    alt="MySQL"
+                                />
+                                <figcaption>MySQL Database</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://flask.palletsprojects.com/en/2.2.x/"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://seeklogo.com/images/F/flask-logo-44C507ABB7-seeklogo.com.png"
+                                    alt="Flask"
+                                />
+                                <figcaption>Flask</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://html.spec.whatwg.org/"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://icon-library.com/images/html5-icon/html5-icon-13.jpg"
+                                    alt="HTML 5"
+                                />
+                                <figcaption>HTML 5</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://www.w3.org/standards/webdesign/htmlcss"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://icon-library.com/images/css3-icon/css3-icon-28.jpg"
+                                    alt="CSS"
+                                />
+                                <figcaption>CSS 3</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://learn.microsoft.com/en-us/dotnet/csharp/"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png"
+                                    alt="C#"
+                                />
+                                <figcaption>C-Sharp</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://dotnet.microsoft.com/en-us/"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/2048px-Microsoft_.NET_logo.svg.png"
+                                    alt=".NET"
+                                />
+                                <figcaption>.NET</figcaption>
+                            </div>
+                        </a>
+                        <a href="https://sass-lang.com/" class="blockLink">
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png"
+                                    alt="SaSS"
+                                />
+                                <figcaption>SaSS (SCSS)</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+                                    alt="Bootstrap-5"
+                                />
+                                <figcaption>Bootstrap 5</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://www.microsoft.com/software-download/windows11"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://cdn.worldvectorlogo.com/logos/microsoft-windows-11.svg"
+                                    alt="Windows 11"
+                                />
+                                <figcaption>Windows 11 and Prior</figcaption>
+                            </div>
+                        </a>
+                        <a
+                            href="https://www.apple.com/uk/macos/monterey/"
+                            class="blockLink"
+                        >
+                            <div class="imageBoxElement">
+                                <img
+                                    src="https://www.pngall.com/wp-content/uploads/4/MacOS-PNG-Free-Download.png"
+                                    alt="MacOS"
+                                />
+                                <figcaption>Mac OS</figcaption>
+                            </div>
+                        </a>
                     </div>
                 </figure>
             </div>
         </main>
+        <!-- down here because it needs to avoid fouc - flash of unstyled content -->
+        <script src="theme.js"></script>
     </body>
 </html>

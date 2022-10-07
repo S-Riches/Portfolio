@@ -6,19 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Experience</title>
         <link rel="stylesheet" href="stylesheet.css" />
+        <!-- used for ionicons -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="dropdown.js"></script>
+        <script src="theme.js"></script>
     </head>
-    <body class="lightmode">
+    <body class="lightMode">
         <header id="header">
             <a href="about.html">About</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="index.html" class="headerLink">Sam J Riches</a>
             <a href="experience.html#experience0">Experience</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
+        </header>
+        <header class="mobileHeader">
+            <a href="index.html" class="headerLinkMobile">Sam J Riches </a>
+            <ion-icon
+                id="dropDown"
+                onclick="dropDownMenu()"
+                name="caret-down"
+            ></ion-icon>
+            <div class="links" id="links">
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="experience.html#experience0">Experience</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </header>
         <main>
             <div class="switch">
                 <!-- use a checkbox to tell when the button is clicked -->
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" onchange="changeTheme()" />
                 <label class="slider" for="checkbox"></label>
             </div>
 
@@ -27,85 +52,102 @@
                 <div class="experienceBlock" id="experience0">
                     <div class="titleAndPicture">
                         <img
-                            src="https://www.pngall.com/wp-content/uploads/4/MacOS-PNG-Free-Download.png"
-                            alt=""
+                            src="https://d3u51sju9fqs0s.cloudfront.net/honywood.png"
+                            alt="Honywood"
                         />
-                        <h2>place of experience</h2>
+                        <h2>Honywood Community Science School</h2>
                     </div>
+                    <h3 class="dateFromTo">2014 - 2019</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Labore harum cum nobis sit veritatis sint aut fuga
-                        dolorem perferendis ab explicabo repudiandae quibusdam
-                        consequuntur tenetur repellendus quas officiis ullam
-                        alias, necessitatibus omnis voluptatibus iure nam quae!
-                        Iste reprehenderit non quam sit aliquid, amet
-                        accusantium officiis adipisci nihil tempora, reiciendis
-                        corporis sed quia modi, doloribus dicta ipsum.
-                        Distinctio assumenda iusto ducimus itaque veritatis unde
-                        nostrum eum eius. Esse aperiam beatae, necessitatibus
-                        laboriosam in omnis sint. Saepe vero beatae id, atque
-                        tenetur est accusantium veritatis quidem molestiae quae!
-                        Odio consequatur dolor quos ratione. Odio excepturi
-                        deleniti obcaecati velit minus in, totam autem.
+                        I studied computer science at GCSE level, where i learnt
+                        a lot of theory and basic Python skills, we touched on
+                        subjects like binary shifts, pseudocode, flowcharts,
+                        fetch-decode-execute cycle, and more. In my opinion,
+                        this is where i got into programming, as to me being
+                        able to tell a computer what you want it to do - and
+                        then it doing it - was fascinating to me.
                     </p>
                 </div>
                 <div class="experienceBlock" id="experience1">
                     <div class="titleAndPicture">
                         <img
-                            src="https://www.pngall.com/wp-content/uploads/4/MacOS-PNG-Free-Download.png"
-                            alt=""
+                            src="https://d3u51sju9fqs0s.cloudfront.net/ci.png"
+                            alt="Colchester Institute"
                         />
-                        <h2>place of experience</h2>
+                        <h2>Colchester Institute</h2>
                     </div>
+                    <h3 class="dateFromTo">2019 - 2022</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Labore harum cum nobis sit veritatis sint aut fuga
-                        dolorem perferendis ab explicabo repudiandae quibusdam
-                        consequuntur tenetur repellendus quas officiis ullam
-                        alias, necessitatibus omnis voluptatibus iure nam quae!
-                        Iste reprehenderit non quam sit aliquid, amet
-                        accusantium officiis adipisci nihil tempora, reiciendis
-                        corporis sed quia modi, doloribus dicta ipsum.
-                        Distinctio assumenda iusto ducimus itaque veritatis unde
-                        nostrum eum eius. Esse aperiam beatae, necessitatibus
-                        laboriosam in omnis sint. Saepe vero beatae id, atque
-                        tenetur est accusantium veritatis quidem molestiae quae!
-                        Odio consequatur dolor quos ratione. Odio excepturi
-                        deleniti obcaecati velit minus in, totam autem.
+                        Starting in september 2019, for my first year i studied
+                        electronic engineering, but after the first year i
+                        decided to change to Computer science as i realised i
+                        was spending alot of my time looking at programming
+                        topics and trying out different technology rather than
+                        researching about circuitry. I then went on to do a 2
+                        Year computer science level 3 BTEC, where i learnt the
+                        basics of app development, networking, software
+                        development, hardware, and more. while i didnt
+                        completley get what i wanted out of my 2 year BTEC, i
+                        did learn a lot of useful theory and techniques that i
+                        still use today.
                     </p>
                 </div>
                 <div class="experienceBlock" id="experience2">
                     <div class="titleAndPicture">
                         <img
-                            src="https://www.pngall.com/wp-content/uploads/4/MacOS-PNG-Free-Download.png"
-                            alt=""
+                            src="https://d3u51sju9fqs0s.cloudfront.net/sainsburys.jpg"
+                            alt="Sainsburys"
                         />
-                        <h2>place of experience</h2>
+                        <h2>Sainsburys</h2>
                     </div>
+                    <h3 class="dateFromTo">2019+</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Labore harum cum nobis sit veritatis sint aut fuga
-                        dolorem perferendis ab explicabo repudiandae quibusdam
-                        consequuntur tenetur repellendus quas officiis ullam
-                        alias, necessitatibus omnis voluptatibus iure nam quae!
-                        Iste reprehenderit non quam sit aliquid, amet
-                        accusantium officiis adipisci nihil tempora, reiciendis
-                        corporis sed quia modi, doloribus dicta ipsum.
-                        Distinctio assumenda iusto ducimus itaque veritatis unde
-                        nostrum eum eius. Esse aperiam beatae, necessitatibus
-                        laboriosam in omnis sint. Saepe vero beatae id, atque
-                        tenetur est accusantium veritatis quidem molestiae quae!
-                        Odio consequatur dolor quos ratione. Odio excepturi
-                        deleniti obcaecati velit minus in, totam autem.
+                        During my first year of college i got a part time job at
+                        the local sainsburys near where i lived to fund myself
+                        through college, working at sainsburys has definitley
+                        helped me improve my confidence in talking to new
+                        people, and working in a team. Working at sainsburys has
+                        also helped me to stick to a schedule.
                     </p>
                 </div>
+                <div class="experienceBlock" id="experience3">
+                    <div class="titleAndPicture">
+                        <img
+                            src="https://d3u51sju9fqs0s.cloudfront.net/wizard.png"
+                            alt="Wizard Code"
+                        />
+                        <h2>Wizard Code (Wizard group)</h2>
+                    </div>
+                    <h3 class="dateFromTo">11/04/2022 - 14/04/2022</h3>
+                    <p>
+                        During college i did work experience at a software
+                        company near where i live. It was a great experience
+                        learning about relational data in a SQL database, how to
+                        use the .NET framework, Docker and more. During this
+                        time i created the League API while shadowing one of the
+                        Software architects - who was really helpful in
+                        explaining different topics, and gave me a reference. he
+                        even included things that i should research in my own
+                        time - which was really helpful for me.
+                    </p>
+                </div>
+                <!-- TODO add just IT once ive completed the bootcamp - maybe before ive completed it? -->
             </div>
             <div class="controls">
                 <!-- place holder -->
-                <input type="button" id="leftButton">go left</input>
-                <input type="button" id="rightButton">go right</input>
+                <ion-icon
+                    name="arrow-back-circle"
+                    class="leftButton"
+                    id="leftButton"
+                ></ion-icon>
+                <ion-icon
+                    name="arrow-forward-circle"
+                    class="rightButton"
+                    id="rightButton"
+                ></ion-icon>
             </div>
             <script src="experienceControls.js"></script>
         </main>
+        <script src="theme.js"></script>
     </body>
 </html>
