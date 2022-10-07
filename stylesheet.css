@@ -146,6 +146,7 @@
   transition: 500ms ease-in-out;
 }
 .lightMode main .block p {
+  padding: 2vw;
   margin: 1vw;
 }
 .lightMode main .block .borderImg > img {
@@ -394,7 +395,7 @@
     flex-direction: column;
   }
   .darkMode .headerLinkMobile {
-    color: #302f30;
+    color: #c1c1c1;
     font-size: 32px;
     margin-bottom: 3vw;
   }
@@ -404,7 +405,7 @@
     align-items: flex-end;
   }
   .darkMode #dropDown {
-    color: #302f30;
+    color: #c1c1c1;
     font-size: 32px;
   }
 }
@@ -497,6 +498,7 @@
   transition: 500ms ease-in-out;
 }
 .darkMode main .block p {
+  padding: 2vw;
   margin: 1vw;
 }
 .darkMode main .block .borderImg > img {

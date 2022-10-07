@@ -153,6 +153,7 @@ $font-family: "Inter Tight", sans-serif;
             // border: 1px solid black;
             transition: 500ms ease-in-out;
             p {
+                padding: 2vw;
                 margin: 1vw;
             }
             .borderImg > img {
@@ -408,7 +409,7 @@ $font-family: "Inter Tight", sans-serif;
             flex-direction: column;
         }
         .headerLinkMobile {
-            color: #302f30;
+            color: #c1c1c1;
             font-size: 32px;
             margin-bottom: 3vw;
         }
@@ -418,7 +419,7 @@ $font-family: "Inter Tight", sans-serif;
             align-items: flex-end;
         }
         #dropDown {
-            color: #302f30;
+            color: #c1c1c1;
             font-size: 32px;
         }
     }
@@ -517,6 +518,7 @@ $font-family: "Inter Tight", sans-serif;
             // border: 1px solid black;
             transition: 500ms ease-in-out;
             p {
+                padding: 2vw;
                 margin: 1vw;
             }
             .borderImg > img {
