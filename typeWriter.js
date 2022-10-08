@@ -37,10 +37,10 @@ async function cursorBlink() {
 
 //fades in the header element and GitHub logo to this page
 async function fadeIn() {
-    let header = document.getElementById("header");
     let logo = document.getElementById("gitHubLogo");
     let image = document.createElement("img");
-    // TODO : dynamically create this depending on the light/dark mode switch
+    let mobileHeader = document.getElementById("mobileHeader");
+    let header = document.getElementById("header");
     image.setAttribute(
         "src",
         "https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png"
@@ -48,12 +48,19 @@ async function fadeIn() {
     image.setAttribute("alt", "github link");
     logo.appendChild(image);
     logo.style.opacity = "0";
-    header.style.opacity = "0";
+    if (screen.width < 768) {
+        mobileHeader.style.opacity = "0";
+        await typeWriter();
+        mobileHeader.style.transition = "0.5s";
+        mobileHeader.style.opacity = "1";
+    } else {
+        header.style.opacity = "0";
+        await typeWriter();
+        header.style.transition = "0.5s";
+        header.style.opacity = "1";
+    }
     // wait until the text has been printed to screen
-    await typeWriter();
-    header.style.transition = "0.5s";
     logo.style.transition = "0.5s";
-    header.style.opacity = "1";
     logo.style.opacity = "1";
 }
 
