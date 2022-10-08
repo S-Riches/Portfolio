@@ -569,6 +569,7 @@
 .darkMode main .imageBoxElement > figcaption {
   text-align: center;
   max-width: 15vw;
+  color: #a0a0a0;
   padding: 5%;
   font-size: 1rem;
   font-family: "Inter Tight", sans-serif;
