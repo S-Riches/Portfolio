@@ -30,10 +30,11 @@ async function typeWriter() {
     }
 }
 
-// Makes the cursor blink
-async function cursorBlink() {
-    let cursor = document.getElementById;
-}
+// TODO RIGHT HERE
+// // Makes the cursor blink
+// async function cursorBlink() {
+//     let cursor = document.getElementById;
+// }
 
 //fades in the header element and GitHub logo to this page
 async function fadeIn() {

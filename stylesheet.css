@@ -1,69 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap");
-.lightMode {
+body {
   background-color: #c1c1c1;
   color: #302f30;
 }
-.lightMode header {
+
+header {
   display: flex;
   justify-content: center;
   margin: 1vw;
   text-align: center;
   align-content: center;
 }
-.lightMode header a {
+header a {
   text-align: center;
   margin: 1vw;
   font-size: large;
-  color: gray;
+  color: #302f30;
   text-decoration: none;
   font-family: "Inter Tight", sans-serif;
 }
-.lightMode header a:hover {
-  color: darkgrey;
+header a:hover {
+  color: #5c5b5b;
   text-decoration: underline;
 }
-.lightMode header .headerLink {
+header .headerLink {
   font-family: "Inter Tight", sans-serif;
   color: #302f30;
   font-size: 32px;
 }
-.lightMode header .headerLink:hover {
+header .headerLink:hover {
   color: #5c5b5b;
 }
-.lightMode .mobileHeader {
+
+.mobileHeader {
   display: none;
 }
+
 @media screen and (max-width: 768px) {
-  .lightMode header {
+  header {
     display: none;
   }
-  .lightMode .mobileHeader {
+  .mobileHeader {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
   }
-  .lightMode .headerLinkMobile {
+  .headerLinkMobile {
     color: #302f30;
     font-size: 32px;
     margin-bottom: 3vw;
   }
-  .lightMode #links {
+  #links {
     flex-direction: column;
     display: none;
     align-items: flex-end;
   }
-  .lightMode #dropDown {
-    color: #171717;
+  #dropDown {
+    color: #302f30;
     font-size: 32px;
     border-radius: 1vw;
-    background-color: #646464;
+    background-color: #5c5b5b;
     margin-bottom: 3vw;
   }
 }
-.lightMode main .headText {
+main .headText {
   text-align: center;
 }
-.lightMode main .switch {
+main .switch {
   position: relative;
   display: block;
   margin-right: 5%;
@@ -71,10 +74,10 @@
   width: 50px;
   height: 25px;
   background-color: #c1c1c1;
-  border: 2px solid #2d2d2a;
+  border: 2px solid #302f30;
   border-radius: 33vw;
 }
-.lightMode main .slider {
+main .slider {
   display: inline-block;
   background-color: #ede7e3;
   height: 25px;
@@ -84,388 +87,33 @@
   transition: 0.5s;
   border-radius: 50%;
 }
-.lightMode main .switch > input {
+main .switch > input {
   display: none;
   opacity: 0;
   height: 0;
   width: 0;
 }
-.lightMode main .switch > input:checked + .slider {
+main .switch > input:checked + .slider {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  background-color: #2d2d2a;
-}
-.lightMode main .sideBySidePicText {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 1vw;
-  flex-wrap: wrap;
-}
-.lightMode main .textPanel {
-  max-width: 50vw;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 1vw;
-  align-self: center;
-}
-.lightMode main .aboutTitle {
-  font-size: 32px;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.lightMode main #imageOfMe {
-  animation: fadeIn 1s;
-  transition: 0.5s;
-  border-radius: 5%;
-  max-width: 40vw;
-  height: auto;
-}
-.lightMode main .moreAboutMeText {
-  margin-bottom: 2vw;
-  line-height: 1.5em;
-  text-align: center;
-}
-.lightMode main .container {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.lightMode main .container > div {
-  flex-basis: 45vw;
-}
-.lightMode main .block {
-  margin: 1vw;
-  border-radius: 5%;
-  background-color: #ede7e3;
-  transition: 500ms ease-in-out;
-}
-.lightMode main .block p {
-  padding: 2vw;
-  margin: 1vw;
-}
-.lightMode main .block .borderImg > img {
-  max-width: 45vw;
-}
-@media screen and (max-width: 768px) {
-  .lightMode main #imageOfMe {
-    max-width: 90vw;
-    margin: 1vw;
-  }
-  .lightMode main .textPanel {
-    max-width: 100vw;
-  }
-  .lightMode main .block .borderImg > img {
-    max-width: 98vw;
-  }
-  .lightMode main .programmerBlock {
-    max-height: 25vh;
-  }
-  .lightMode main .programmerBlock .terminalText {
-    font-size: 3.5vw;
-  }
-  .lightMode main .experienceBlock {
-    width: 80vw;
-  }
-}
-.lightMode main .block:hover {
-  box-shadow: 3px 3px 40px #171717;
-}
-.lightMode main .flexBoxHolder {
-  box-sizing: border-box;
-  display: flex;
-}
-.lightMode main .flexBoxHolderContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.lightMode main .flexBoxHolder > figure {
-  margin: 0;
-}
-.lightMode main .blockLink {
-  display: block;
-  text-decoration: none;
-  color: #302f30;
-}
-.lightMode main .imageBoxElement {
-  border-radius: 1vw;
-  transition: 0.5s ease-in-out;
-  align-items: center;
-  padding: 2vw;
-}
-.lightMode main .imageBoxElement:hover {
-  background-color: #a0a0a0;
-  box-shadow: 1px 5px 40px black;
-}
-.lightMode main .imageBoxElement > img {
-  max-width: 15vw;
-  max-height: 15vw;
-}
-.lightMode main .imageBoxElement > figcaption {
-  text-align: center;
-  max-width: 15vw;
-  padding: 5%;
-  font-size: 1rem;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main .experienceBlockHolder {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.lightMode main .titleAndPicture {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.lightMode main .titleAndPicture h2 {
-  margin-left: 20%;
-}
-.lightMode main .titleAndPicture > img {
-  border-radius: 33vw;
-  max-width: 20vw;
-  max-height: 20vh;
-}
-.lightMode main .dateFromTo {
-  margin: 0;
-  text-align: center;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main .experienceBlock {
-  animation: fadeIn 1s;
-  opacity: 0;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 80vw;
-  padding: 3vw;
-  background-color: #ede7e3;
-  border-radius: 50px;
-}
-.lightMode main .experienceBlock:target {
-  display: flex;
-  transition: 0.5s ease-in-out;
-  opacity: 1;
-}
-.lightMode main .controls {
-  color: #2d2d2a;
-  display: flex;
-  justify-content: center;
-}
-.lightMode main .leftButton {
-  transition: 0.5s ease-in-out;
-  font-size: 20vw;
-}
-.lightMode main .rightButton {
-  transition: 0.5s ease-in-out;
-  font-size: 20vw;
-}
-.lightMode main .leftButton:hover {
-  transition: 0.5s ease-in-out;
-  font-size: 25vw;
-}
-.lightMode main .rightButton:hover {
-  transition: 0.5s ease-in-out;
-  font-size: 25vw;
-}
-.lightMode main h1,
-.lightMode main h2 {
-  text-align: center;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main p {
-  margin: 1%;
-  font-size: x-large;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main .programmerBlock {
-  position: relative;
-  background-color: #2d2d2a;
-  margin-top: 5%;
-  border-radius: 1vw;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 1%;
-  height: 600px;
-  width: auto;
-}
-.lightMode main .positionBlock {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-.lightMode main .terminalText {
-  align-self: center;
-  color: #04f06a;
-  font-size: 3vw;
-  font-family: "Courier New", Courier, monospace;
-  white-space: pre;
-}
-.lightMode main #gitHubLogo {
-  display: flex;
-}
-.lightMode main #gitHubLogo img {
-  width: 10vw;
-  margin-left: 5%;
-  height: auto;
-}
-.lightMode main .contactContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.lightMode main .contact {
-  min-width: 40%;
-  display: flex;
-  padding: 0.5vw;
-  border-radius: 1vw;
-  transition: 0.5s ease-in-out;
-  background-color: #ede7e3;
-  min-width: 50vw;
-  max-height: 10vw;
-  align-items: center;
-  margin: 1vw;
-}
-.lightMode main .contact img {
-  max-width: 10vw;
-}
-.lightMode main .contact .contactLink {
-  text-align: center;
-  margin-left: auto;
-  margin-right: 10%;
-  font-size: 30px;
-  text-decoration: none;
-  font-family: "Inter Tight", sans-serif;
-  color: #171717;
-}
-.lightMode main .contact .contactLink:hover {
-  color: #757575;
-}
-.lightMode main .contact:hover {
-  transition: 0.5s ease-in-out;
-  box-shadow: 3px 3px 40px #171717;
-}
-
-.darkMode {
   background-color: #302f30;
-  color: #c1c1c1;
 }
-.darkMode header {
-  display: flex;
-  justify-content: center;
-  margin: 1vw;
-  text-align: center;
-  align-content: center;
-}
-.darkMode header a {
-  text-align: center;
-  margin: 1vw;
-  font-size: large;
-  color: gray;
-  text-decoration: none;
-  font-family: "Inter Tight", sans-serif;
-}
-.darkMode header a:hover {
-  color: darkgrey;
-  text-decoration: underline;
-}
-.darkMode header .headerLink {
-  font-family: "Inter Tight", sans-serif;
-  color: #c1c1c1;
-  font-size: 32px;
-}
-.darkMode .mobileHeader {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .darkMode header {
-    display: none;
-  }
-  .darkMode .mobileHeader {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-  }
-  .darkMode .headerLinkMobile {
-    color: #c1c1c1;
-    font-size: 32px;
-    margin-bottom: 3vw;
-  }
-  .darkMode #links {
-    flex-direction: column;
-    display: none;
-    align-items: flex-end;
-  }
-  .darkMode #dropDown {
-    color: #c1c1c1;
-    font-size: 32px;
-    border-radius: 1vw;
-    background-color: #757575;
-    margin-bottom: 3vw;
-  }
-}
-.darkMode main .headText {
-  text-align: center;
-}
-.darkMode main .switch {
-  position: relative;
-  display: block;
-  margin-right: 5%;
-  margin-left: auto;
-  width: 50px;
-  height: 25px;
-  background-color: #ede7e3;
-  border: 2px solid #c1c1c1;
-  border-radius: 33vw;
-}
-.darkMode main .slider {
-  display: inline-block;
-  background-color: #ede7e3;
-  height: 25px;
-  width: 26px;
-  margin-top: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border-radius: 50%;
-}
-.darkMode main .switch > input {
-  display: none;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-.darkMode main .switch > input:checked + .slider {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  background-color: #2d2d2a;
-}
-.darkMode main .sideBySidePicText {
+main .sideBySidePicText {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 1vw;
   flex-wrap: wrap;
 }
-.darkMode main .textPanel {
+main .textPanel {
   max-width: 50vw;
   text-align: center;
   justify-content: center;
   margin-bottom: 1vw;
   align-self: center;
 }
-.darkMode main .aboutTitle {
+main .aboutTitle {
   font-size: 32px;
 }
 @keyframes fadeIn {
@@ -476,128 +124,127 @@
     opacity: 1;
   }
 }
-.darkMode main #imageOfMe {
+main #imageOfMe {
   animation: fadeIn 1s;
   transition: 0.5s;
   border-radius: 5%;
   max-width: 40vw;
   height: auto;
 }
-.darkMode main .moreAboutMeText {
+main .moreAboutMeText {
   margin-bottom: 2vw;
   line-height: 1.5em;
   text-align: center;
 }
-.darkMode main .container {
+main .container {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.darkMode main .container > div {
+main .container > div {
   flex-basis: 45vw;
 }
-.darkMode main .block {
+main .block {
   margin: 1vw;
   border-radius: 5%;
-  background-color: #171717;
+  background-color: #ede7e3;
   transition: 500ms ease-in-out;
 }
-.darkMode main .block p {
+main .block p {
   padding: 2vw;
   margin: 1vw;
 }
-.darkMode main .block .borderImg > img {
+main .block .borderImg > img {
   max-width: 45vw;
 }
 @media screen and (max-width: 768px) {
-  .darkMode main #imageOfMe {
+  main #imageOfMe {
     max-width: 90vw;
     margin: 1vw;
   }
-  .darkMode main .textPanel {
+  main .textPanel {
     max-width: 100vw;
   }
-  .darkMode main .block .borderImg > img {
+  main .block .borderImg > img {
     max-width: 98vw;
   }
-  .darkMode main .programmerBlock {
+  main .programmerBlock {
     max-height: 25vh;
   }
-  .darkMode main .programmerBlock .terminalText {
+  main .programmerBlock .terminalText {
     font-size: 3.5vw;
   }
-  .darkMode main .experienceBlock {
+  main .experienceBlock {
     width: 80vw;
   }
 }
-.darkMode main .block:hover {
-  box-shadow: 3px 3px 40px #171717;
+main .block:hover {
+  box-shadow: 3px 3px 40px #302f30;
 }
-.darkMode main .flexBoxHolder {
+main .flexBoxHolder {
   box-sizing: border-box;
   display: flex;
 }
-.darkMode main .flexBoxHolderContainer {
+main .flexBoxHolderContainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
-.darkMode main .flexBoxHolder > figure {
+main .flexBoxHolder > figure {
   margin: 0;
 }
-.darkMode main .blockLink {
+main .blockLink {
   display: block;
   text-decoration: none;
   color: #302f30;
 }
-.darkMode main .imageBoxElement {
+main .imageBoxElement {
   border-radius: 1vw;
   transition: 0.5s ease-in-out;
   align-items: center;
   padding: 2vw;
 }
-.darkMode main .imageBoxElement:hover {
-  background-color: #171717;
+main .imageBoxElement:hover {
+  background-color: #ede7e3;
   box-shadow: 1px 5px 40px black;
 }
-.darkMode main .imageBoxElement > img {
+main .imageBoxElement > img {
   max-width: 15vw;
   max-height: 15vw;
 }
-.darkMode main .imageBoxElement > figcaption {
+main .imageBoxElement > figcaption {
   text-align: center;
   max-width: 15vw;
-  color: #a0a0a0;
   padding: 5%;
   font-size: 1rem;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main .experienceBlockHolder {
+main .experienceBlockHolder {
   display: flex;
   justify-content: center;
   align-content: center;
 }
-.darkMode main .titleAndPicture {
+main .titleAndPicture {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.darkMode main .titleAndPicture h2 {
+main .titleAndPicture h2 {
   margin-left: 20%;
 }
-.darkMode main .titleAndPicture > img {
+main .titleAndPicture > img {
   border-radius: 33vw;
   max-width: 20vw;
   max-height: 20vh;
 }
-.darkMode main .dateFromTo {
+main .dateFromTo {
   margin: 0;
   text-align: center;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main .experienceBlock {
+main .experienceBlock {
   animation: fadeIn 1s;
   opacity: 0;
   display: none;
@@ -605,48 +252,48 @@
   justify-content: center;
   max-width: 80vw;
   padding: 3vw;
-  background-color: #171717;
+  background-color: #ede7e3;
   border-radius: 50px;
 }
-.darkMode main .experienceBlock:target {
+main .experienceBlock:target {
   display: flex;
   transition: 0.5s ease-in-out;
   opacity: 1;
 }
-.darkMode main .controls {
-  color: #171717;
+main .controls {
+  color: #302f30;
   display: flex;
   justify-content: center;
 }
-.darkMode main .leftButton {
+main .leftButton {
   transition: 0.5s ease-in-out;
   font-size: 20vw;
 }
-.darkMode main .rightButton {
+main .rightButton {
   transition: 0.5s ease-in-out;
   font-size: 20vw;
 }
-.darkMode main .leftButton:hover {
+main .leftButton:hover {
   transition: 0.5s ease-in-out;
   font-size: 25vw;
 }
-.darkMode main .rightButton:hover {
+main .rightButton:hover {
   transition: 0.5s ease-in-out;
   font-size: 25vw;
 }
-.darkMode main h1,
-.darkMode main h2 {
+main h1,
+main h2 {
   text-align: center;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main p {
+main p {
   margin: 1%;
   font-size: x-large;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main .programmerBlock {
+main .programmerBlock {
   position: relative;
-  background-color: #2d2d2a;
+  background-color: #302f30;
   margin-top: 5%;
   border-radius: 1vw;
   margin-left: 5%;
@@ -655,62 +302,62 @@
   height: 600px;
   width: auto;
 }
-.darkMode main .positionBlock {
+main .positionBlock {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
 }
-.darkMode main .terminalText {
+main .terminalText {
   align-self: center;
   color: #04f06a;
   font-size: 3vw;
   font-family: "Courier New", Courier, monospace;
   white-space: pre;
 }
-.darkMode main #gitHubLogo {
+main #gitHubLogo {
   display: flex;
 }
-.darkMode main #gitHubLogo img {
+main #gitHubLogo img {
   width: 10vw;
   margin-left: 5%;
   height: auto;
 }
-.darkMode main .contactContainer {
+main .contactContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.darkMode main .contact {
+main .contact {
   min-width: 40%;
   display: flex;
   padding: 0.5vw;
   border-radius: 1vw;
   transition: 0.5s ease-in-out;
-  background-color: #171717;
+  background-color: #ede7e3;
   min-width: 50vw;
   max-height: 10vw;
   align-items: center;
   margin: 1vw;
 }
-.darkMode main .contact img {
+main .contact img {
   max-width: 10vw;
 }
-.darkMode main .contact .contactLink {
+main .contact .contactLink {
   text-align: center;
   margin-left: auto;
   margin-right: 10%;
   font-size: 30px;
   text-decoration: none;
   font-family: "Inter Tight", sans-serif;
-  color: #c1c1c1;
+  color: #302f30;
 }
-.darkMode main .contact .contactLink:hover {
-  color: #757575;
+main .contact .contactLink:hover {
+  color: #5c5b5b;
 }
-.darkMode main .contact:hover {
+main .contact:hover {
   transition: 0.5s ease-in-out;
-  box-shadow: 3px 3px 40px #171717;
+  box-shadow: 3px 3px 40px #302f30;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
