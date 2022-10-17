@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap");
+:root {
+  --textColour: #302f30;
+  --backgroundColour: #c1c1c1;
+  --altBackgroundColour: #ede7e3;
+  --hoverColour: #5c5b5b;
+}
+
 body {
-  background-color: #c1c1c1;
-  color: #302f30;
+  background-color: var(--backgroundColour);
+  color: var(--textColour);
 }
 
 header {
@@ -15,21 +22,21 @@ header a {
   text-align: center;
   margin: 1vw;
   font-size: large;
-  color: #302f30;
+  color: var(--textColour);
   text-decoration: none;
   font-family: "Inter Tight", sans-serif;
 }
 header a:hover {
-  color: #5c5b5b;
+  color: var(--hoverColour);
   text-decoration: underline;
 }
 header .headerLink {
   font-family: "Inter Tight", sans-serif;
-  color: #302f30;
+  color: var(--textColour);
   font-size: 32px;
 }
 header .headerLink:hover {
-  color: #5c5b5b;
+  color: var(--hoverColour);
 }
 
 .mobileHeader {
@@ -46,7 +53,7 @@ header .headerLink:hover {
     flex-direction: column;
   }
   .headerLinkMobile {
-    color: #302f30;
+    color: var(--textColour);
     font-size: 32px;
     margin-bottom: 3vw;
   }
@@ -56,10 +63,10 @@ header .headerLink:hover {
     align-items: flex-end;
   }
   #dropDown {
-    color: #302f30;
+    color: var(--textColour);
     font-size: 32px;
     border-radius: 1vw;
-    background-color: #5c5b5b;
+    background-color: var(--hoverColour);
     margin-bottom: 3vw;
   }
 }
@@ -73,13 +80,13 @@ main .switch {
   margin-left: auto;
   width: 50px;
   height: 25px;
-  background-color: #c1c1c1;
-  border: 2px solid #302f30;
+  background-color: var(--backgroundColour);
+  border: 2px solid var(--textColour);
   border-radius: 33vw;
 }
 main .slider {
   display: inline-block;
-  background-color: #ede7e3;
+  background-color: var(--altBackgroundColour);
   height: 25px;
   width: 26px;
   margin-top: 0;
@@ -97,7 +104,7 @@ main .switch > input:checked + .slider {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  background-color: #302f30;
+  background-color: var(--textColour);
 }
 main .sideBySidePicText {
   display: flex;
@@ -124,6 +131,11 @@ main .aboutTitle {
     opacity: 1;
   }
 }
+main .moreAboutMeBox h1 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 4rem;
+}
 main #imageOfMe {
   animation: fadeIn 1s;
   transition: 0.5s;
@@ -148,7 +160,7 @@ main .container > div {
 main .block {
   margin: 1vw;
   border-radius: 5%;
-  background-color: #ede7e3;
+  background-color: var(--altBackgroundColour);
   transition: 500ms ease-in-out;
 }
 main .block p {
@@ -180,7 +192,7 @@ main .block .borderImg > img {
   }
 }
 main .block:hover {
-  box-shadow: 3px 3px 40px #302f30;
+  box-shadow: 3px 3px 40px #1d1d1d;
 }
 main .flexBoxHolder {
   box-sizing: border-box;
@@ -189,8 +201,8 @@ main .flexBoxHolder {
 main .flexBoxHolderContainer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
+  gap: 0.5vw;
+  justify-content: center;
 }
 main .flexBoxHolder > figure {
   margin: 0;
@@ -198,21 +210,23 @@ main .flexBoxHolder > figure {
 main .blockLink {
   display: block;
   text-decoration: none;
-  color: #302f30;
+  color: var(--textColour);
 }
 main .imageBoxElement {
   border-radius: 1vw;
   transition: 0.5s ease-in-out;
   align-items: center;
   padding: 2vw;
+  min-width: 100px;
+  max-width: 15vw;
 }
 main .imageBoxElement:hover {
-  background-color: #ede7e3;
+  background-color: var(--altBackgroundColour);
   box-shadow: 1px 5px 40px black;
 }
 main .imageBoxElement > img {
-  max-width: 15vw;
-  max-height: 15vw;
+  max-width: 100%;
+  max-height: 100%;
 }
 main .imageBoxElement > figcaption {
   text-align: center;
@@ -252,7 +266,7 @@ main .experienceBlock {
   justify-content: center;
   max-width: 80vw;
   padding: 3vw;
-  background-color: #ede7e3;
+  background-color: var(--altBackgroundColour);
   border-radius: 50px;
 }
 main .experienceBlock:target {
@@ -261,7 +275,7 @@ main .experienceBlock:target {
   opacity: 1;
 }
 main .controls {
-  color: #302f30;
+  color: var(--textColour);
   display: flex;
   justify-content: center;
 }
@@ -293,8 +307,8 @@ main p {
 }
 main .programmerBlock {
   position: relative;
-  background-color: #302f30;
-  margin-top: 5%;
+  background-color: #1d1d1d;
+  margin-top: 3%;
   border-radius: 1vw;
   margin-left: 5%;
   margin-right: 5%;
@@ -334,7 +348,7 @@ main .contact {
   padding: 0.5vw;
   border-radius: 1vw;
   transition: 0.5s ease-in-out;
-  background-color: #ede7e3;
+  background-color: var(--altBackgroundColour);
   min-width: 50vw;
   max-height: 10vw;
   align-items: center;
@@ -350,14 +364,14 @@ main .contact .contactLink {
   font-size: 30px;
   text-decoration: none;
   font-family: "Inter Tight", sans-serif;
-  color: #302f30;
+  color: var(--textColour);
 }
 main .contact .contactLink:hover {
-  color: #5c5b5b;
+  color: var(--hoverColour);
 }
 main .contact:hover {
   transition: 0.5s ease-in-out;
-  box-shadow: 3px 3px 40px #302f30;
+  box-shadow: 3px 3px 40px #1d1d1d;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

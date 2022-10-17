@@ -135,6 +135,11 @@ main {
             opacity: 1;
         }
     }
+    .moreAboutMeBox h1 {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 4rem;
+    }
     #imageOfMe {
         animation: fadeIn 1s;
         transition: 0.5s;
@@ -160,7 +165,7 @@ main {
     .block {
         margin: 1vw;
         border-radius: 5%;
-        // placeholder for the colour pallette
+        // placeholder for the colour palette
         background-color: var(--altBackgroundColour);
 
         transition: 500ms ease-in-out;
@@ -197,7 +202,7 @@ main {
         }
     }
     .block:hover {
-        box-shadow: 3px 3px 40px var(--textColour);
+        box-shadow: 3px 3px 40px #1d1d1d;
     }
     .flexBoxHolder {
         box-sizing: border-box;
@@ -206,8 +211,8 @@ main {
     .flexBoxHolderContainer {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
+        gap: 0.5vw;
+        justify-content: center;
     }
     .flexBoxHolder > figure {
         margin: 0;
@@ -222,14 +227,16 @@ main {
         transition: 0.5s ease-in-out;
         align-items: center;
         padding: 2vw;
+        min-width: 100px;
+        max-width: 15vw;
     }
     .imageBoxElement:hover {
         background-color: var(--altBackgroundColour);
         box-shadow: 1px 5px 40px black;
     }
     .imageBoxElement > img {
-        max-width: 15vw;
-        max-height: 15vw;
+        max-width: 100%;
+        max-height: 100%;
     }
     .imageBoxElement > figcaption {
         text-align: center;
@@ -312,7 +319,7 @@ main {
     .programmerBlock {
         position: relative;
         background-color: #1d1d1d;
-        margin-top: 5%;
+        margin-top: 3%;
         border-radius: 1vw;
         margin-left: 5%;
         margin-right: 5%;
@@ -375,6 +382,6 @@ main {
     }
     .contact:hover {
         transition: 0.5s ease-in-out;
-        box-shadow: 3px 3px 40px var(--textColour);
+        box-shadow: 3px 3px 40px #1d1d1d;
     }
 }
