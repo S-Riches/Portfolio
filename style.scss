@@ -1,16 +1,16 @@
-// Forgive me for the monolith that is this file
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap");
 $font-family: "Inter Tight", sans-serif;
 // gonna declare variables here for the light and dark mode
-// gonna figure out a way to change this within js
-$textColour: #302f30;
-$backgroundColour: #c1c1c1;
-$altBackgroundColour: #ede7e3;
-$hoverColour: #5c5b5b;
-
+// gotta use default css vars here as i want to change these via js, and sass isnt rendered client side
+:root {
+    --textColour: #302f30;
+    --backgroundColour: #c1c1c1;
+    --altBackgroundColour: #ede7e3;
+    --hoverColour: #5c5b5b;
+}
 body {
-    background-color: $backgroundColour;
-    color: $textColour;
+    background-color: var(--backgroundColour);
+    color: var(--textColour);
 }
 header {
     display: flex;
@@ -22,20 +22,20 @@ header {
         text-align: center;
         margin: 1vw;
         font-size: large;
-        color: $textColour;
+        color: var(--textColour);
         text-decoration: none;
         font-family: $font-family;
         &:hover {
-            color: $hoverColour;
+            color: var(--hoverColour);
             text-decoration: underline;
         }
     }
     .headerLink {
         font-family: $font-family;
-        color: $textColour;
+        color: var(--textColour);
         font-size: 32px;
         &:hover {
-            color: $hoverColour;
+            color: var(--hoverColour);
         }
     }
 }
@@ -52,7 +52,7 @@ header {
         flex-direction: column;
     }
     .headerLinkMobile {
-        color: $textColour;
+        color: var(--textColour);
         font-size: 32px;
         margin-bottom: 3vw;
     }
@@ -62,11 +62,11 @@ header {
         align-items: flex-end;
     }
     #dropDown {
-        color: $textColour;
+        color: var(--textColour);
         font-size: 32px;
 
         border-radius: 1vw;
-        background-color: $hoverColour;
+        background-color: var(--hoverColour);
         margin-bottom: 3vw;
     }
 }
@@ -83,13 +83,13 @@ main {
         margin-left: auto;
         width: 50px;
         height: 25px;
-        background-color: $backgroundColour;
-        border: 2px solid $textColour;
+        background-color: var(--backgroundColour);
+        border: 2px solid var(--textColour);
         border-radius: 33vw;
     }
     .slider {
         display: inline-block;
-        background-color: $altBackgroundColour;
+        background-color: var(--altBackgroundColour);
         height: 25px;
         width: 26px;
         margin-top: 0;
@@ -107,7 +107,7 @@ main {
         -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
         transform: translateX(100%);
-        background-color: $textColour;
+        background-color: var(--textColour);
     }
     .sideBySidePicText {
         display: flex;
@@ -161,7 +161,7 @@ main {
         margin: 1vw;
         border-radius: 5%;
         // placeholder for the colour pallette
-        background-color: $altBackgroundColour;
+        background-color: var(--altBackgroundColour);
 
         transition: 500ms ease-in-out;
         p {
@@ -197,7 +197,7 @@ main {
         }
     }
     .block:hover {
-        box-shadow: 3px 3px 40px $textColour;
+        box-shadow: 3px 3px 40px var(--textColour);
     }
     .flexBoxHolder {
         box-sizing: border-box;
@@ -215,7 +215,7 @@ main {
     .blockLink {
         display: block;
         text-decoration: none;
-        color: $textColour;
+        color: var(--textColour);
     }
     .imageBoxElement {
         border-radius: 1vw;
@@ -224,7 +224,7 @@ main {
         padding: 2vw;
     }
     .imageBoxElement:hover {
-        background-color: $altBackgroundColour;
+        background-color: var(--altBackgroundColour);
         box-shadow: 1px 5px 40px black;
     }
     .imageBoxElement > img {
@@ -269,7 +269,7 @@ main {
         justify-content: center;
         max-width: 80vw;
         padding: 3vw;
-        background-color: $altBackgroundColour;
+        background-color: var(--altBackgroundColour);
 
         border-radius: 50px;
     }
@@ -279,7 +279,7 @@ main {
         opacity: 1;
     }
     .controls {
-        color: $textColour;
+        color: var(--textColour);
         display: flex;
         justify-content: center;
     }
@@ -311,7 +311,7 @@ main {
     }
     .programmerBlock {
         position: relative;
-        background-color: $textColour;
+        background-color: #1d1d1d;
         margin-top: 5%;
         border-radius: 1vw;
         margin-left: 5%;
@@ -352,7 +352,7 @@ main {
         padding: 0.5vw;
         border-radius: 1vw;
         transition: 0.5s ease-in-out;
-        background-color: $altBackgroundColour;
+        background-color: var(--altBackgroundColour);
         min-width: 50vw;
         max-height: 10vw;
         align-items: center;
@@ -367,14 +367,14 @@ main {
             font-size: 30px;
             text-decoration: none;
             font-family: $font-family;
-            color: $textColour;
+            color: var(--textColour);
         }
         .contactLink:hover {
-            color: $hoverColour;
+            color: var(--hoverColour);
         }
     }
     .contact:hover {
         transition: 0.5s ease-in-out;
-        box-shadow: 3px 3px 40px $textColour;
+        box-shadow: 3px 3px 40px var(--textColour);
     }
 }
