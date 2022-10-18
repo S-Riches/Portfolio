@@ -17,7 +17,7 @@ function moveToEnd(char, string) {
 // function to put the text into the terminal box to appear as someone is actually typing it
 async function typeWriter() {
     const terminal = document.getElementById("terminalText");
-    const text = `_let name = {
+    const text = `_const name = {
         firstName : "Sam",
         lastName : "Riches",
         jobTitle : "Junior Software Dev"

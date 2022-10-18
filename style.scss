@@ -12,54 +12,113 @@ body {
     background-color: var(--backgroundColour);
     color: var(--textColour);
 }
+
 header {
+    background-color: var(--altBackgroundColour);
+    border-radius: 1vw;
     display: flex;
     justify-content: center;
     margin: 1vw;
     text-align: center;
-    align-content: center;
-    a {
-        text-align: center;
-        margin: 1vw;
-        font-size: large;
-        color: var(--textColour);
-        text-decoration: none;
-        font-family: $font-family;
-        &:hover {
-            color: var(--hoverColour);
-            text-decoration: underline;
+    .navbarLinks {
+        margin-left: auto;
+        align-self: center;
+        font-size: 2.2rem;
+        > a {
+            // border: 0.2vw solid var(--textColour);
+            padding: 1vw;
+            margin-right: 1vw;
+            border-radius: 1vw;
+            font-family: $font-family;
+            text-decoration: none;
+            color: var(--textColour);
+            transition: color 0.1s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
+            &:hover {
+                color: var(--backgroundColour);
+                background-color: var(--hoverColour);
+            }
+        }
+        #cv {
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            border: 0.2vw solid #04f06a;
+            color: var(--textColour);
+            transition: background-color 0.5s ease-in-out;
+            &:hover {
+                color: #1d1d1d;
+                background-color: #04f06a;
+            }
         }
     }
     .headerLink {
         font-family: $font-family;
         color: var(--textColour);
-        font-size: 32px;
+        text-decoration: none;
+        font-size: 4.5rem;
+        padding: 1vw;
+        margin: 2.5vw;
+        border-radius: 1vw;
+        transition: background-color 0.5s ease-in-out;
+
         &:hover {
-            color: var(--hoverColour);
+            background-color: var(--hoverColour);
+            color: var(--backgroundColour);
         }
     }
 }
 .mobileHeader {
     display: none;
 }
+@media screen and (max-width: 1140px) {
+    .navbarLinks {
+        a {
+            font-size: 1.5rem;
+        }
+    }
+}
 @media screen and (max-width: 768px) {
     header {
         display: none;
     }
     .mobileHeader {
+        background-color: var(--backgroundColour);
         display: flex;
         align-items: flex-end;
         flex-direction: column;
     }
     .headerLinkMobile {
         color: var(--textColour);
-        font-size: 32px;
+        font-family: $font-family;
+        margin-right: 4vw;
+        font-size: 3rem;
         margin-bottom: 3vw;
+        text-decoration: none;
+    }
+    ion-icon {
+        margin-right: 4vw;
     }
     #links {
+        margin-right: 1vw;
         flex-direction: column;
         display: none;
         align-items: flex-end;
+        a {
+            text-decoration: none;
+            padding: 1vw;
+            margin: 1vw;
+            background-color: var(--altBackgroundColour);
+            border-radius: 1vw;
+            font-family: $font-family;
+            font-size: 23px;
+            color: var(--textColour);
+        }
+        #cv {
+            background-color: #04f06a;
+            color: #1d1d1d;
+            padding-left: 2vw;
+            padding-right: 2vw;
+        }
     }
     #dropDown {
         color: var(--textColour);
@@ -74,6 +133,7 @@ main {
     // reference class like this basically creates a container to put stuff in
     .headText {
         text-align: center;
+        font-size: 1.75rem;
     }
     //code for the switch
     .switch {
@@ -82,17 +142,21 @@ main {
         margin-right: 5%;
         margin-left: auto;
         width: 50px;
-        height: 25px;
+        height: 26px;
         background-color: var(--backgroundColour);
-        border: 2px solid var(--textColour);
+        border: 0.25vw solid var(--textColour);
         border-radius: 33vw;
+    }
+    .boxLink {
+        text-decoration: none;
+        color: var(--textColour);
     }
     .slider {
         display: inline-block;
-        background-color: var(--altBackgroundColour);
-        height: 25px;
+        background-color: var(--textColour);
+        height: 26px;
         width: 26px;
-        margin-top: 0;
+        margin-left: 0.1%;
         -webkit-transition: 0.5s;
         transition: 0.5s;
         border-radius: 50%;
@@ -117,6 +181,7 @@ main {
         flex-wrap: wrap;
     }
     .textPanel {
+        font-size: 1.75rem;
         max-width: 50vw;
         text-align: center;
         justify-content: center;
@@ -124,7 +189,7 @@ main {
         align-self: center;
     }
     .aboutTitle {
-        font-size: 32px;
+        font-size: 3rem;
     }
     // makes the image loading less buggy
     @keyframes fadeIn {
@@ -138,7 +203,7 @@ main {
     .moreAboutMeBox h1 {
         margin-top: 10%;
         margin-bottom: 10%;
-        font-size: 4rem;
+        font-size: 3rem;
     }
     #imageOfMe {
         animation: fadeIn 1s;
@@ -148,6 +213,7 @@ main {
         height: auto;
     }
     .moreAboutMeText {
+        font-size: 1.75rem;
         margin-bottom: 2vw;
         line-height: 1.5em;
         text-align: center;
@@ -162,16 +228,38 @@ main {
     .container > div {
         flex-basis: 45vw;
     }
+    .blockInfo {
+        display: flex;
+        flex-direction: column;
+        > .blockLink {
+            font-family: $font-family;
+            font-size: 1.5rem;
+            border-radius: 0.5vw;
+            padding: 1vw;
+            margin: auto;
+            text-decoration: none;
+            color: var(--textColour);
+            margin-top: 1vw;
+            text-align: center;
+            background-color: var(--backgroundColour);
+            transition: color 0.5s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
+            &:hover {
+                background-color: var(--hoverColour);
+                color: #1d1d1d;
+                box-shadow: 1px 5px 40px black;
+            }
+        }
+    }
+
     .block {
         margin: 1vw;
         border-radius: 5%;
-        // placeholder for the colour palette
         background-color: var(--altBackgroundColour);
-
         transition: 500ms ease-in-out;
         p {
+            font-size: 2rem;
             padding: 2vw;
-            margin: 1vw;
         }
         .borderImg > img {
             max-width: 45vw;
@@ -186,6 +274,9 @@ main {
         .textPanel {
             max-width: 100vw;
         }
+        .switch {
+            border: 2.5px solid var(--textColour);
+        }
         .block {
             .borderImg > img {
                 max-width: 98vw;
@@ -199,6 +290,9 @@ main {
         }
         .experienceBlock {
             width: 80vw;
+            p {
+                font-size: 2rem;
+            }
         }
     }
     .block:hover {
@@ -217,11 +311,6 @@ main {
     .flexBoxHolder > figure {
         margin: 0;
     }
-    .blockLink {
-        display: block;
-        text-decoration: none;
-        color: var(--textColour);
-    }
     .imageBoxElement {
         border-radius: 1vw;
         transition: 0.5s ease-in-out;
@@ -234,6 +323,9 @@ main {
         background-color: var(--altBackgroundColour);
         box-shadow: 1px 5px 40px black;
     }
+    h1 {
+        font-size: 3rem;
+    }
     .imageBoxElement > img {
         max-width: 100%;
         max-height: 100%;
@@ -242,7 +334,7 @@ main {
         text-align: center;
         max-width: 15vw;
         padding: 5%;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-family: $font-family;
     }
     .experienceBlockHolder {
@@ -264,6 +356,7 @@ main {
         }
     }
     .dateFromTo {
+        font-size: 2rem;
         margin: 0;
         text-align: center;
         font-family: $font-family;
@@ -277,8 +370,13 @@ main {
         max-width: 80vw;
         padding: 3vw;
         background-color: var(--altBackgroundColour);
-
         border-radius: 50px;
+        p {
+            font-size: 1.75rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
     }
     .experienceBlock:target {
         display: flex;
@@ -292,19 +390,19 @@ main {
     }
     .leftButton {
         transition: 0.5s ease-in-out;
-        font-size: 20vw;
+        font-size: 10rem;
     }
     .rightButton {
         transition: 0.5s ease-in-out;
-        font-size: 20vw;
+        font-size: 10rem;
     }
     .leftButton:hover {
         transition: 0.5s ease-in-out;
-        font-size: 25vw;
+        font-size: 15rem;
     }
     .rightButton:hover {
         transition: 0.5s ease-in-out;
-        font-size: 25vw;
+        font-size: 15rem;
     }
     h1,
     h2 {
