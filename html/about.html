@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="stylesheet.css" />
+        <link rel="stylesheet" href="/stylesheet.css" />
         <title>About Me!</title>
-        <link rel="icon" href="man-technologist-emoji-by-google.png" />
+        <link rel="icon" href="/man-technologist-emoji-by-google.png" />
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -15,18 +15,21 @@
             nomodule
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
-        <script src="dropdown.js"></script>
+        <script src="/javascript/dropdown.js"></script>
     </head>
-    <body class="lightMode">
+    <body>
         <header id="header">
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="index.html" class="headerLink">Sam J Riches</a>
-            <a href="experience.html#experience0">Experience</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" class="headerLink">SJR</a>
+            <div class="navbarLinks">
+                <a href="about.html">1. About</a>
+                <a href="portfolio.html">2. Portfolio</a>
+                <a href="experience.html#experience0">3. Experience</a>
+                <a href="contact.html">4. Contact</a>
+                <a id="cv" href="">CV</a>
+            </div>
         </header>
         <header class="mobileHeader">
-            <a href="index.html" class="headerLinkMobile">Sam J Riches </a>
+            <a href="index.html" class="headerLinkMobile">SJR</a>
             <ion-icon
                 id="dropDown"
                 onclick="dropDownMenu()"
@@ -37,6 +40,7 @@
                 <a href="portfolio.html">Portfolio</a>
                 <a href="experience.html#experience0">Experience</a>
                 <a href="contact.html">Contact</a>
+                <a id="cv" href="">CV</a>
             </div>
         </header>
         <main>
@@ -45,10 +49,8 @@
                 <input type="checkbox" id="checkbox" onchange="changeTheme()" />
                 <label class="slider" for="checkbox"></label>
             </div>
-            <!-- grid -->
             <div class="sideBySidePicText">
                 <div>
-                    <!-- image of me -->
                     <img
                         id="imageOfMe"
                         src="https://d33k2b40n3olse.cloudfront.net/me.jpg"
@@ -78,7 +80,7 @@
                     </p>
                 </div>
             </div>
-            <div>
+            <div class="moreAboutMeBox">
                 <h1>More about me</h1>
                 <p class="moreAboutMeText">
                     Throughout the years I've picked up and put down some
@@ -112,16 +114,14 @@
                     to see my work (please see either the portfolio page or the
                     contact page).
                 </p>
+                <h1>Tech i use</h1>
             </div>
-            <h1>Tech i use</h1>
             <div class="flexBoxHolder">
                 <figure>
                     <div class="flexBoxHolderContainer">
                         <!-- images displayed in a row of eight blocks that resize for mobile -->
-                        <!-- TODO : make these easier to look at and also make them more fit to the theme once i implement the theme -->
-                        <!-- TODO : add links to each -->
 
-                        <a class="blockLink" href="https://www.github.com/">
+                        <a class="boxLink" href="https://www.github.com/">
                             <div class="imageBoxElement">
                                 <img
                                     src="https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png"
@@ -132,7 +132,7 @@
                         </a>
                         <a
                             href="https://code.visualstudio.com/"
-                            class="blockLink"
+                            class="boxLink"
                         >
                             <div class="imageBoxElement">
                                 <img
@@ -144,7 +144,7 @@
                         </a>
                         <a
                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                            class="blockLink"
+                            class="boxLink"
                         >
                             <div class="imageBoxElement">
                                 <img
@@ -154,7 +154,7 @@
                                 <figcaption>JavaScript</figcaption>
                             </div>
                         </a>
-                        <a href="https://ubuntu.com/" class="blockLink">
+                        <a href="https://ubuntu.com/" class="boxLink">
                             <div class="imageBoxElement">
                                 <img
                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png"
@@ -163,7 +163,7 @@
                                 <figcaption>Linux</figcaption>
                             </div>
                         </a>
-                        <a href="https://git-scm.com/" class="blockLink">
+                        <a href="https://git-scm.com/" class="boxLink">
                             <div class="imageBoxElement">
                                 <img
                                     src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
@@ -172,7 +172,7 @@
                                 <figcaption>Git</figcaption>
                             </div>
                         </a>
-                        <a href="https://www.docker.com/" class="blockLink">
+                        <a href="https://www.docker.com/" class="boxLink">
                             <div class="imageBoxElement">
                                 <img
                                     src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
@@ -181,19 +181,19 @@
                                 <figcaption>Docker</figcaption>
                             </div>
                         </a>
-                        <a href="https://www.python.org/" class="blockLink">
+                        <a href="https://www.python.org/" class="boxLink">
                             <div class="imageBoxElement">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+                                    src="https://storage.needpix.com/rsynced_images/language-2024210_1280.png"
                                     alt="Python"
                                 />
                                 <figcaption>Python</figcaption>
                             </div>
                         </a>
-                        <a href="https://www.mysql.com/" class="blockLink">
+                        <a href="https://www.mysql.com/" class="boxLink">
                             <div class="imageBoxElement">
                                 <img
-                                    src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png"
+                                    src="https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png"
                                     alt="MySQL"
                                 />
                                 <figcaption>MySQL Database</figcaption>
@@ -201,20 +201,17 @@
                         </a>
                         <a
                             href="https://flask.palletsprojects.com/en/2.2.x/"
-                            class="blockLink"
+                            class="boxLink"
                         >
                             <div class="imageBoxElement">
                                 <img
-                                    src="https://seeklogo.com/images/F/flask-logo-44C507ABB7-seeklogo.com.png"
-                                    alt="Flask"
+                                    src="https://verbose-equals-true.gitlab.io/django-postgres-vue-gitlab-ecs/django.jpg"
+                                    alt="Django"
                                 />
-                                <figcaption>Flask</figcaption>
+                                <figcaption>Django</figcaption>
                             </div>
                         </a>
-                        <a
-                            href="https://html.spec.whatwg.org/"
-                            class="blockLink"
-                        >
+                        <a href="https://html.spec.whatwg.org/" class="boxLink">
                             <div class="imageBoxElement">
                                 <img
                                     src="https://icon-library.com/images/html5-icon/html5-icon-13.jpg"
@@ -225,7 +222,7 @@
                         </a>
                         <a
                             href="https://www.w3.org/standards/webdesign/htmlcss"
-                            class="blockLink"
+                            class="boxLink"
                         >
                             <div class="imageBoxElement">
                                 <img
@@ -237,7 +234,7 @@
                         </a>
                         <a
                             href="https://learn.microsoft.com/en-us/dotnet/csharp/"
-                            class="blockLink"
+                            class="boxLink"
                         >
                             <div class="imageBoxElement">
                                 <img
@@ -249,7 +246,7 @@
                         </a>
                         <a
                             href="https://dotnet.microsoft.com/en-us/"
-                            class="blockLink"
+                            class="boxLink"
                         >
                             <div class="imageBoxElement">
                                 <img
@@ -259,7 +256,7 @@
                                 <figcaption>.NET</figcaption>
                             </div>
                         </a>
-                        <a href="https://sass-lang.com/" class="blockLink">
+                        <a href="https://sass-lang.com/" class="boxLink">
                             <div class="imageBoxElement">
                                 <img
                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png"
@@ -270,7 +267,7 @@
                         </a>
                         <a
                             href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
-                            class="blockLink"
+                            class="boxLink"
                         >
                             <div class="imageBoxElement">
                                 <img
@@ -280,35 +277,10 @@
                                 <figcaption>Bootstrap 5</figcaption>
                             </div>
                         </a>
-                        <a
-                            href="https://www.microsoft.com/software-download/windows11"
-                            class="blockLink"
-                        >
-                            <div class="imageBoxElement">
-                                <img
-                                    src="https://cdn.worldvectorlogo.com/logos/microsoft-windows-11.svg"
-                                    alt="Windows 11"
-                                />
-                                <figcaption>Windows 11 and Prior</figcaption>
-                            </div>
-                        </a>
-                        <a
-                            href="https://www.apple.com/uk/macos/monterey/"
-                            class="blockLink"
-                        >
-                            <div class="imageBoxElement">
-                                <img
-                                    src="https://www.pngall.com/wp-content/uploads/4/MacOS-PNG-Free-Download.png"
-                                    alt="MacOS"
-                                />
-                                <figcaption>Mac OS</figcaption>
-                            </div>
-                        </a>
                     </div>
                 </figure>
             </div>
+            <script src="/javascript/theme.js"></script>
         </main>
-        <!-- down here because it needs to avoid fouc - flash of unstyled content -->
-        <script src="theme.js"></script>
     </body>
 </html>

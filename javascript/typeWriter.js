@@ -17,7 +17,7 @@ function moveToEnd(char, string) {
 // function to put the text into the terminal box to appear as someone is actually typing it
 async function typeWriter() {
     const terminal = document.getElementById("terminalText");
-    const text = `_let name = {
+    const text = `_const name = {
         firstName : "Sam",
         lastName : "Riches",
         jobTitle : "Junior Software Dev"
@@ -32,7 +32,15 @@ async function typeWriter() {
 
 // Makes the cursor blink
 async function cursorBlink() {
-    let cursor = document.getElementById;
+    const terminal = document.getElementById("terminalText");
+    let terminalText = terminal.innerText;
+    let terminalTextCopy = terminalText.substring(0, terminalText.length - 1);
+    while (true) {
+        terminal.innerText = terminalText;
+        await sleep(300);
+        terminal.innerText = terminalTextCopy;
+        await sleep(300);
+    }
 }
 
 //fades in the header element and GitHub logo to this page
@@ -59,6 +67,7 @@ async function fadeIn() {
         header.style.transition = "0.5s";
         header.style.opacity = "1";
     }
+    cursorBlink();
     // wait until the text has been printed to screen
     logo.style.transition = "0.5s";
     logo.style.opacity = "1";

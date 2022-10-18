@@ -1,741 +1,485 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap");
 $font-family: "Inter Tight", sans-serif;
-.lightMode {
-    background-color: #c1c1c1;
-    color: #302f30;
-    header {
-        display: flex;
-        justify-content: center;
-        margin: 1vw;
-        text-align: center;
-        align-content: center;
-        a {
-            text-align: center;
-            margin: 1vw;
-            font-size: large;
-            color: gray;
+// gonna declare variables here for the light and dark mode
+// gotta use default css vars here as i want to change these via js, and sass isnt rendered client side
+:root {
+    --textColour: #302f30;
+    --backgroundColour: #c1c1c1;
+    --altBackgroundColour: #ede7e3;
+    --hoverColour: #5c5b5b;
+}
+body {
+    background-color: var(--backgroundColour);
+    color: var(--textColour);
+}
+
+header {
+    background-color: var(--altBackgroundColour);
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    margin: 1vw;
+    text-align: center;
+    .navbarLinks {
+        margin-left: auto;
+        align-self: center;
+        font-size: 2.2rem;
+        > a {
+            // border: 0.2vw solid var(--textColour);
+            padding: 1vw;
+            margin-right: 1vw;
+            border-radius: 1vw;
+            font-family: $font-family;
             text-decoration: none;
-            font-family: $font-family;
+            color: var(--textColour);
+            transition: color 0.1s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
             &:hover {
-                color: darkgrey;
-                text-decoration: underline;
+                color: var(--backgroundColour);
+                background-color: var(--hoverColour);
             }
         }
-        .headerLink {
-            font-family: $font-family;
-            color: #302f30;
-            font-size: 32px;
+        #cv {
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            border: 0.2vw solid #04f06a;
+            color: var(--textColour);
+            transition: background-color 0.5s ease-in-out;
             &:hover {
-                color: #5c5b5b;
+                color: #1d1d1d;
+                background-color: #04f06a;
             }
         }
     }
-    .mobileHeader {
-        display: none;
-    }
-    @media screen and (max-width: 768px) {
-        header {
-            display: none;
-        }
-        .mobileHeader {
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-        }
-        .headerLinkMobile {
-            color: #302f30;
-            font-size: 32px;
-            margin-bottom: 3vw;
-        }
-        #links {
-            flex-direction: column;
-            display: none;
-            align-items: flex-end;
-        }
-        #dropDown {
-            color: #171717;
-            font-size: 32px;
+    .headerLink {
+        font-family: $font-family;
+        color: var(--textColour);
+        text-decoration: none;
+        font-size: 4.5rem;
+        padding: 1vw;
+        margin: 2.5vw;
+        border-radius: 1vw;
+        transition: background-color 0.5s ease-in-out;
 
-            border-radius: 1vw;
-            background-color: #646464;
-            margin-bottom: 3vw;
-        }
-    }
-    main {
-        // reference class like this basically creates a container to put stuff in
-        .headText {
-            text-align: center;
-        }
-        //code for the switch
-        .switch {
-            position: relative;
-            display: block;
-            margin-right: 5%;
-            margin-left: auto;
-            width: 50px;
-            height: 25px;
-            background-color: #c1c1c1;
-            border: 2px solid #2d2d2a;
-            border-radius: 33vw;
-        }
-        .slider {
-            display: inline-block;
-            background-color: #ede7e3;
-            height: 25px;
-            width: 26px;
-            margin-top: 0;
-            -webkit-transition: 0.5s;
-            transition: 0.5s;
-            border-radius: 50%;
-        }
-        .switch > input {
-            display: none;
-            opacity: 0;
-            height: 0;
-            width: 0;
-        }
-        .switch > input:checked + .slider {
-            -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-            transform: translateX(100%);
-            background-color: #2d2d2a;
-        }
-        .sideBySidePicText {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 1vw;
-            flex-wrap: wrap;
-        }
-        .textPanel {
-            max-width: 50vw;
-            text-align: center;
-            justify-content: center;
-            margin-bottom: 1vw;
-            align-self: center;
-        }
-        .aboutTitle {
-            font-size: 32px;
-        }
-        // makes the image loading less buggy
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        #imageOfMe {
-            animation: fadeIn 1s;
-            transition: 0.5s;
-            border-radius: 5%;
-            max-width: 40vw;
-            height: auto;
-        }
-        .moreAboutMeText {
-            margin-bottom: 2vw;
-            line-height: 1.5em;
-            text-align: center;
-        }
-        // portfolio code for boxes
-        .container {
-            box-sizing: border-box;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .container > div {
-            flex-basis: 45vw;
-        }
-        .block {
-            margin: 1vw;
-            border-radius: 5%;
-            // placeholder for the colour pallette
-            background-color: #ede7e3;
-
-            transition: 500ms ease-in-out;
-            p {
-                padding: 2vw;
-                margin: 1vw;
-            }
-            .borderImg > img {
-                max-width: 45vw;
-            }
-        }
-        // code to ensure that phones can see my portfolio responsively
-        @media screen and (max-width: 768px) {
-            #imageOfMe {
-                max-width: 90vw;
-                margin: 1vw;
-            }
-            .textPanel {
-                max-width: 100vw;
-            }
-            .block {
-                .borderImg > img {
-                    max-width: 98vw;
-                }
-            }
-            .programmerBlock {
-                max-height: 25vh;
-                .terminalText {
-                    font-size: 3.5vw;
-                }
-            }
-            .experienceBlock {
-                width: 80vw;
-            }
-        }
-        .block:hover {
-            box-shadow: 3px 3px 40px #171717;
-        }
-        .flexBoxHolder {
-            box-sizing: border-box;
-            display: flex;
-        }
-        .flexBoxHolderContainer {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        .flexBoxHolder > figure {
-            margin: 0;
-        }
-        .blockLink {
-            display: block;
-            text-decoration: none;
-            color: #302f30;
-        }
-        .imageBoxElement {
-            border-radius: 1vw;
-            transition: 0.5s ease-in-out;
-            align-items: center;
-            padding: 2vw;
-        }
-        .imageBoxElement:hover {
-            background-color: #a0a0a0;
-            box-shadow: 1px 5px 40px black;
-        }
-        .imageBoxElement > img {
-            max-width: 15vw;
-            max-height: 15vw;
-        }
-        .imageBoxElement > figcaption {
-            text-align: center;
-            max-width: 15vw;
-            padding: 5%;
-            font-size: 1rem;
-            font-family: $font-family;
-        }
-        .experienceBlockHolder {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-        }
-        .titleAndPicture {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            h2 {
-                margin-left: 20%;
-            }
-            > img {
-                border-radius: 33vw;
-                max-width: 20vw;
-                max-height: 20vh;
-            }
-        }
-        .dateFromTo {
-            margin: 0;
-            text-align: center;
-            font-family: $font-family;
-        }
-        .experienceBlock {
-            animation: fadeIn 1s;
-            opacity: 0;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 80vw;
-            padding: 3vw;
-            background-color: #ede7e3;
-
-            border-radius: 50px;
-        }
-        .experienceBlock:target {
-            display: flex;
-            transition: 0.5s ease-in-out;
-            opacity: 1;
-        }
-        .controls {
-            color: #2d2d2a;
-            display: flex;
-            justify-content: center;
-        }
-        .leftButton {
-            transition: 0.5s ease-in-out;
-            font-size: 20vw;
-        }
-        .rightButton {
-            transition: 0.5s ease-in-out;
-            font-size: 20vw;
-        }
-        .leftButton:hover {
-            transition: 0.5s ease-in-out;
-            font-size: 25vw;
-        }
-        .rightButton:hover {
-            transition: 0.5s ease-in-out;
-            font-size: 25vw;
-        }
-        h1,
-        h2 {
-            text-align: center;
-            font-family: $font-family;
-        }
-        p {
-            margin: 1%;
-            font-size: x-large;
-            font-family: $font-family;
-        }
-        .programmerBlock {
-            position: relative;
-            background-color: #2d2d2a;
-            margin-top: 5%;
-            border-radius: 1vw;
-            margin-left: 5%;
-            margin-right: 5%;
-            margin-bottom: 1%;
-            height: 600px;
-            width: auto;
-        }
-        .positionBlock {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-        }
-        .terminalText {
-            align-self: center;
-            color: #04f06a;
-            font-size: 3vw;
-            font-family: "Courier New", Courier, monospace;
-            white-space: pre;
-        }
-        #gitHubLogo {
-            display: flex;
-            img {
-                width: 10vw;
-                margin-left: 5%;
-                height: auto;
-            }
-        }
-        .contactContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .contact {
-            min-width: 40%;
-            display: flex;
-            padding: 0.5vw;
-            border-radius: 1vw;
-            transition: 0.5s ease-in-out;
-            background-color: #ede7e3;
-            min-width: 50vw;
-            max-height: 10vw;
-            align-items: center;
-            margin: 1vw;
-            img {
-                max-width: 10vw;
-            }
-            .contactLink {
-                text-align: center;
-                margin-left: auto;
-                margin-right: 10%;
-                font-size: 30px;
-                text-decoration: none;
-                font-family: $font-family;
-                color: #171717;
-            }
-            .contactLink:hover {
-                color: #757575;
-            }
-        }
-        .contact:hover {
-            transition: 0.5s ease-in-out;
-            box-shadow: 3px 3px 40px #171717;
+        &:hover {
+            background-color: var(--hoverColour);
+            color: var(--backgroundColour);
         }
     }
 }
-// dark mode pls
-.darkMode {
-    background-color: #302f30;
-    color: #c1c1c1;
-    header {
-        display: flex;
-        justify-content: center;
-        margin: 1vw;
-        text-align: center;
-        align-content: center;
+.mobileHeader {
+    display: none;
+}
+@media screen and (max-width: 1140px) {
+    .navbarLinks {
         a {
-            text-align: center;
-            margin: 1vw;
-            font-size: large;
-            color: gray;
-            text-decoration: none;
-            font-family: $font-family;
-            &:hover {
-                color: darkgrey;
-                text-decoration: underline;
-            }
-        }
-        .headerLink {
-            font-family: $font-family;
-            color: #c1c1c1;
-            font-size: 32px;
+            font-size: 1.5rem;
         }
     }
-    .mobileHeader {
+}
+@media screen and (max-width: 768px) {
+    header {
         display: none;
     }
-    @media screen and (max-width: 768px) {
-        header {
-            display: none;
-        }
-        .mobileHeader {
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-        }
-        .headerLinkMobile {
-            color: #c1c1c1;
-            font-size: 32px;
-            margin-bottom: 3vw;
-        }
-        #links {
-            flex-direction: column;
-            display: none;
-            align-items: flex-end;
-        }
-        #dropDown {
-            color: #c1c1c1;
-            font-size: 32px;
-
+    .mobileHeader {
+        background-color: var(--backgroundColour);
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .headerLinkMobile {
+        color: var(--textColour);
+        font-family: $font-family;
+        margin-right: 4vw;
+        font-size: 3rem;
+        margin-bottom: 3vw;
+        text-decoration: none;
+    }
+    ion-icon {
+        margin-right: 4vw;
+    }
+    #links {
+        margin-right: 1vw;
+        flex-direction: column;
+        display: none;
+        align-items: flex-end;
+        a {
+            text-decoration: none;
+            padding: 1vw;
+            margin: 1vw;
+            background-color: var(--altBackgroundColour);
             border-radius: 1vw;
-            background-color: #757575;
-            margin-bottom: 3vw;
+            font-family: $font-family;
+            font-size: 23px;
+            color: var(--textColour);
+        }
+        #cv {
+            background-color: #04f06a;
+            color: #1d1d1d;
+            padding-left: 2vw;
+            padding-right: 2vw;
         }
     }
-    main {
-        // reference class like this basically creates a container to put stuff in
-        .headText {
-            text-align: center;
-        }
-        //code for the switch
-        .switch {
-            position: relative;
-            display: block;
-            margin-right: 5%;
-            margin-left: auto;
-            width: 50px;
-            height: 25px;
-            background-color: #ede7e3;
-            border: 2px solid #c1c1c1;
-            border-radius: 33vw;
-        }
-        .slider {
-            display: inline-block;
-            background-color: #ede7e3;
-            height: 25px;
-            width: 26px;
-            margin-top: 0;
-            -webkit-transition: 0.5s;
-            transition: 0.5s;
-            border-radius: 50%;
-        }
-        .switch > input {
-            display: none;
-            opacity: 0;
-            height: 0;
-            width: 0;
-        }
-        .switch > input:checked + .slider {
-            -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-            transform: translateX(100%);
-            background-color: #2d2d2a;
-        }
-        .sideBySidePicText {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 1vw;
-            flex-wrap: wrap;
-        }
-        .textPanel {
-            max-width: 50vw;
-            text-align: center;
-            justify-content: center;
-            margin-bottom: 1vw;
-            align-self: center;
-        }
-        .aboutTitle {
-            font-size: 32px;
-        }
-        // makes the image loading less buggy
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        #imageOfMe {
-            animation: fadeIn 1s;
-            transition: 0.5s;
-            border-radius: 5%;
-            max-width: 40vw;
-            height: auto;
-        }
-        .moreAboutMeText {
-            margin-bottom: 2vw;
-            line-height: 1.5em;
-            text-align: center;
-        }
-        // portfolio code for boxes
-        .container {
-            box-sizing: border-box;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .container > div {
-            flex-basis: 45vw;
-        }
-        .block {
-            margin: 1vw;
-            border-radius: 5%;
-            // placeholder for the colour pallette
-            background-color: #171717;
+    #dropDown {
+        color: var(--textColour);
+        font-size: 32px;
 
-            transition: 500ms ease-in-out;
-            p {
-                padding: 2vw;
-                margin: 1vw;
-            }
-            .borderImg > img {
-                max-width: 45vw;
-            }
-        }
-        // code to ensure that phones can see my portfolio responsively
-        @media screen and (max-width: 768px) {
-            #imageOfMe {
-                max-width: 90vw;
-                margin: 1vw;
-            }
-            .textPanel {
-                max-width: 100vw;
-            }
-            .block {
-                .borderImg > img {
-                    max-width: 98vw;
-                }
-            }
-            .programmerBlock {
-                max-height: 25vh;
-                .terminalText {
-                    font-size: 3.5vw;
-                }
-            }
-            .experienceBlock {
-                width: 80vw;
-            }
-        }
-        .block:hover {
-            box-shadow: 3px 3px 40px #171717;
-        }
-        .flexBoxHolder {
-            box-sizing: border-box;
-            display: flex;
-        }
-        .flexBoxHolderContainer {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        .flexBoxHolder > figure {
-            margin: 0;
-        }
-        .blockLink {
-            display: block;
-            text-decoration: none;
-            color: #302f30;
-        }
-        .imageBoxElement {
-            border-radius: 1vw;
-            transition: 0.5s ease-in-out;
-            align-items: center;
-            padding: 2vw;
-        }
-        .imageBoxElement:hover {
-            background-color: #171717;
-            box-shadow: 1px 5px 40px black;
-        }
-        .imageBoxElement > img {
-            max-width: 15vw;
-            max-height: 15vw;
-        }
-        .imageBoxElement > figcaption {
-            text-align: center;
-            max-width: 15vw;
-            color: #a0a0a0;
-            padding: 5%;
-            font-size: 1rem;
-            font-family: $font-family;
-        }
-        .experienceBlockHolder {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-        }
-        .titleAndPicture {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            h2 {
-                margin-left: 20%;
-            }
-            > img {
-                border-radius: 33vw;
-                max-width: 20vw;
-                max-height: 20vh;
-            }
-        }
-        .dateFromTo {
-            margin: 0;
-            text-align: center;
-            font-family: $font-family;
-        }
-        .experienceBlock {
-            animation: fadeIn 1s;
+        border-radius: 1vw;
+        background-color: var(--hoverColour);
+        margin-bottom: 3vw;
+    }
+}
+main {
+    // reference class like this basically creates a container to put stuff in
+    .headText {
+        text-align: center;
+        font-size: 1.75rem;
+    }
+    //code for the switch
+    .switch {
+        position: relative;
+        display: block;
+        margin-right: 5%;
+        margin-left: auto;
+        width: 50px;
+        height: 26px;
+        background-color: var(--backgroundColour);
+        border: 0.25vw solid var(--textColour);
+        border-radius: 33vw;
+    }
+    .boxLink {
+        text-decoration: none;
+        color: var(--textColour);
+    }
+    .slider {
+        display: inline-block;
+        background-color: var(--textColour);
+        height: 26px;
+        width: 26px;
+        margin-left: 0.1%;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        border-radius: 50%;
+    }
+    .switch > input {
+        display: none;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+    .switch > input:checked + .slider {
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        background-color: var(--textColour);
+    }
+    .sideBySidePicText {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1vw;
+        flex-wrap: wrap;
+    }
+    .textPanel {
+        font-size: 1.75rem;
+        max-width: 50vw;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 1vw;
+        align-self: center;
+    }
+    .aboutTitle {
+        font-size: 3rem;
+    }
+    // makes the image loading less buggy
+    @keyframes fadeIn {
+        0% {
             opacity: 0;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 80vw;
-            padding: 3vw;
-            background-color: #171717;
-
-            border-radius: 50px;
         }
-        .experienceBlock:target {
-            display: flex;
-            transition: 0.5s ease-in-out;
+        100% {
             opacity: 1;
         }
-        .controls {
-            color: #171717;
-            display: flex;
-            justify-content: center;
-        }
-        .leftButton {
-            transition: 0.5s ease-in-out;
-            font-size: 20vw;
-        }
-        .rightButton {
-            transition: 0.5s ease-in-out;
-            font-size: 20vw;
-        }
-        .leftButton:hover {
-            transition: 0.5s ease-in-out;
-            font-size: 25vw;
-        }
-        .rightButton:hover {
-            transition: 0.5s ease-in-out;
-            font-size: 25vw;
-        }
-        h1,
-        h2 {
+    }
+    .moreAboutMeBox h1 {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+    }
+    #imageOfMe {
+        animation: fadeIn 1s;
+        transition: 0.5s;
+        border-radius: 5%;
+        max-width: 40vw;
+        height: auto;
+    }
+    .moreAboutMeText {
+        font-size: 1.75rem;
+        margin-bottom: 2vw;
+        line-height: 1.5em;
+        text-align: center;
+    }
+    // portfolio code for boxes
+    .container {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container > div {
+        flex-basis: 45vw;
+    }
+    .blockInfo {
+        display: flex;
+        flex-direction: column;
+        > .blockLink {
+            font-family: $font-family;
+            font-size: 1.5rem;
+            border-radius: 0.5vw;
+            padding: 1vw;
+            margin: auto;
+            text-decoration: none;
+            color: var(--textColour);
+            margin-top: 1vw;
             text-align: center;
-            font-family: $font-family;
+            background-color: var(--backgroundColour);
+            transition: color 0.5s ease-in-out;
+            transition: background-color 0.5s ease-in-out;
+            &:hover {
+                background-color: var(--hoverColour);
+                color: #1d1d1d;
+                box-shadow: 1px 5px 40px black;
+            }
         }
+    }
+
+    .block {
+        margin: 1vw;
+        border-radius: 5%;
+        background-color: var(--altBackgroundColour);
+        transition: 500ms ease-in-out;
         p {
-            margin: 1%;
-            font-size: x-large;
-            font-family: $font-family;
+            font-size: 2rem;
+            padding: 2vw;
+        }
+        .borderImg > img {
+            max-width: 45vw;
+        }
+    }
+    // code to ensure that phones can see my portfolio responsively
+    @media screen and (max-width: 768px) {
+        #imageOfMe {
+            max-width: 90vw;
+            margin: 1vw;
+        }
+        .textPanel {
+            max-width: 100vw;
+        }
+        .switch {
+            border: 2.5px solid var(--textColour);
+        }
+        .block {
+            .borderImg > img {
+                max-width: 98vw;
+            }
         }
         .programmerBlock {
-            position: relative;
-            background-color: #2d2d2a;
-            margin-top: 5%;
-            border-radius: 1vw;
+            max-height: 25vh;
+            .terminalText {
+                font-size: 3.5vw;
+            }
+        }
+        .experienceBlock {
+            width: 80vw;
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+    .block:hover {
+        box-shadow: 3px 3px 40px #1d1d1d;
+    }
+    .flexBoxHolder {
+        box-sizing: border-box;
+        display: flex;
+    }
+    .flexBoxHolderContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5vw;
+        justify-content: center;
+    }
+    .flexBoxHolder > figure {
+        margin: 0;
+    }
+    .imageBoxElement {
+        border-radius: 1vw;
+        transition: 0.5s ease-in-out;
+        align-items: center;
+        padding: 2vw;
+        min-width: 100px;
+        max-width: 15vw;
+    }
+    .imageBoxElement:hover {
+        background-color: var(--altBackgroundColour);
+        box-shadow: 1px 5px 40px black;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .imageBoxElement > img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .imageBoxElement > figcaption {
+        text-align: center;
+        max-width: 15vw;
+        padding: 5%;
+        font-size: 1.5rem;
+        font-family: $font-family;
+    }
+    .experienceBlockHolder {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .titleAndPicture {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        h2 {
+            margin-left: 20%;
+        }
+        > img {
+            border-radius: 33vw;
+            max-width: 20vw;
+            max-height: 20vh;
+        }
+    }
+    .dateFromTo {
+        font-size: 2rem;
+        margin: 0;
+        text-align: center;
+        font-family: $font-family;
+    }
+    .experienceBlock {
+        animation: fadeIn 1s;
+        opacity: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 80vw;
+        padding: 3vw;
+        background-color: var(--altBackgroundColour);
+        border-radius: 50px;
+        p {
+            font-size: 1.75rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    .experienceBlock:target {
+        display: flex;
+        transition: 0.5s ease-in-out;
+        opacity: 1;
+    }
+    .controls {
+        color: var(--textColour);
+        display: flex;
+        justify-content: center;
+    }
+    .leftButton {
+        transition: 0.5s ease-in-out;
+        font-size: 10rem;
+    }
+    .rightButton {
+        transition: 0.5s ease-in-out;
+        font-size: 10rem;
+    }
+    .leftButton:hover {
+        transition: 0.5s ease-in-out;
+        font-size: 15rem;
+    }
+    .rightButton:hover {
+        transition: 0.5s ease-in-out;
+        font-size: 15rem;
+    }
+    h1,
+    h2 {
+        text-align: center;
+        font-family: $font-family;
+    }
+    p {
+        margin: 1%;
+        font-size: x-large;
+        font-family: $font-family;
+    }
+    .programmerBlock {
+        position: relative;
+        background-color: #1d1d1d;
+        margin-top: 3%;
+        border-radius: 1vw;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 1%;
+        height: 600px;
+        width: auto;
+    }
+    .positionBlock {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    .terminalText {
+        align-self: center;
+        color: #04f06a;
+        font-size: 3vw;
+        font-family: "Courier New", Courier, monospace;
+        white-space: pre;
+    }
+    #gitHubLogo {
+        display: flex;
+        img {
+            width: 10vw;
             margin-left: 5%;
-            margin-right: 5%;
-            margin-bottom: 1%;
-            height: 600px;
-            width: auto;
+            height: auto;
         }
-        .positionBlock {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
+    }
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact {
+        min-width: 40%;
+        display: flex;
+        padding: 0.5vw;
+        border-radius: 1vw;
+        transition: 0.5s ease-in-out;
+        background-color: var(--altBackgroundColour);
+        min-width: 50vw;
+        max-height: 10vw;
+        align-items: center;
+        margin: 1vw;
+        img {
+            max-width: 10vw;
         }
-        .terminalText {
-            align-self: center;
-            color: #04f06a;
-            font-size: 3vw;
-            font-family: "Courier New", Courier, monospace;
-            white-space: pre;
+        .contactLink {
+            text-align: center;
+            margin-left: auto;
+            margin-right: 10%;
+            font-size: 30px;
+            text-decoration: none;
+            font-family: $font-family;
+            color: var(--textColour);
         }
-        #gitHubLogo {
-            display: flex;
-            img {
-                width: 10vw;
-                margin-left: 5%;
-                height: auto;
-            }
+        .contactLink:hover {
+            color: var(--hoverColour);
         }
-        .contactContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .contact {
-            min-width: 40%;
-            display: flex;
-            padding: 0.5vw;
-            border-radius: 1vw;
-            transition: 0.5s ease-in-out;
-            background-color: #171717;
-            min-width: 50vw;
-            max-height: 10vw;
-            align-items: center;
-            margin: 1vw;
-            img {
-                max-width: 10vw;
-            }
-            .contactLink {
-                text-align: center;
-                margin-left: auto;
-                margin-right: 10%;
-                font-size: 30px;
-                text-decoration: none;
-                font-family: $font-family;
-                color: #c1c1c1;
-            }
-            .contactLink:hover {
-                color: #757575;
-            }
-        }
-        .contact:hover {
-            transition: 0.5s ease-in-out;
-            box-shadow: 3px 3px 40px #171717;
-        }
+    }
+    .contact:hover {
+        transition: 0.5s ease-in-out;
+        box-shadow: 3px 3px 40px #1d1d1d;
     }
 }

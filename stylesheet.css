@@ -1,472 +1,187 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap");
-.lightMode {
-  background-color: #c1c1c1;
-  color: #302f30;
-}
-.lightMode header {
-  display: flex;
-  justify-content: center;
-  margin: 1vw;
-  text-align: center;
-  align-content: center;
-}
-.lightMode header a {
-  text-align: center;
-  margin: 1vw;
-  font-size: large;
-  color: gray;
-  text-decoration: none;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode header a:hover {
-  color: darkgrey;
-  text-decoration: underline;
-}
-.lightMode header .headerLink {
-  font-family: "Inter Tight", sans-serif;
-  color: #302f30;
-  font-size: 32px;
-}
-.lightMode header .headerLink:hover {
-  color: #5c5b5b;
-}
-.lightMode .mobileHeader {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .lightMode header {
-    display: none;
-  }
-  .lightMode .mobileHeader {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-  }
-  .lightMode .headerLinkMobile {
-    color: #302f30;
-    font-size: 32px;
-    margin-bottom: 3vw;
-  }
-  .lightMode #links {
-    flex-direction: column;
-    display: none;
-    align-items: flex-end;
-  }
-  .lightMode #dropDown {
-    color: #171717;
-    font-size: 32px;
-    border-radius: 1vw;
-    background-color: #646464;
-    margin-bottom: 3vw;
-  }
-}
-.lightMode main .headText {
-  text-align: center;
-}
-.lightMode main .switch {
-  position: relative;
-  display: block;
-  margin-right: 5%;
-  margin-left: auto;
-  width: 50px;
-  height: 25px;
-  background-color: #c1c1c1;
-  border: 2px solid #2d2d2a;
-  border-radius: 33vw;
-}
-.lightMode main .slider {
-  display: inline-block;
-  background-color: #ede7e3;
-  height: 25px;
-  width: 26px;
-  margin-top: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border-radius: 50%;
-}
-.lightMode main .switch > input {
-  display: none;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-.lightMode main .switch > input:checked + .slider {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  background-color: #2d2d2a;
-}
-.lightMode main .sideBySidePicText {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 1vw;
-  flex-wrap: wrap;
-}
-.lightMode main .textPanel {
-  max-width: 50vw;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 1vw;
-  align-self: center;
-}
-.lightMode main .aboutTitle {
-  font-size: 32px;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.lightMode main #imageOfMe {
-  animation: fadeIn 1s;
-  transition: 0.5s;
-  border-radius: 5%;
-  max-width: 40vw;
-  height: auto;
-}
-.lightMode main .moreAboutMeText {
-  margin-bottom: 2vw;
-  line-height: 1.5em;
-  text-align: center;
-}
-.lightMode main .container {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.lightMode main .container > div {
-  flex-basis: 45vw;
-}
-.lightMode main .block {
-  margin: 1vw;
-  border-radius: 5%;
-  background-color: #ede7e3;
-  transition: 500ms ease-in-out;
-}
-.lightMode main .block p {
-  padding: 2vw;
-  margin: 1vw;
-}
-.lightMode main .block .borderImg > img {
-  max-width: 45vw;
-}
-@media screen and (max-width: 768px) {
-  .lightMode main #imageOfMe {
-    max-width: 90vw;
-    margin: 1vw;
-  }
-  .lightMode main .textPanel {
-    max-width: 100vw;
-  }
-  .lightMode main .block .borderImg > img {
-    max-width: 98vw;
-  }
-  .lightMode main .programmerBlock {
-    max-height: 25vh;
-  }
-  .lightMode main .programmerBlock .terminalText {
-    font-size: 3.5vw;
-  }
-  .lightMode main .experienceBlock {
-    width: 80vw;
-  }
-}
-.lightMode main .block:hover {
-  box-shadow: 3px 3px 40px #171717;
-}
-.lightMode main .flexBoxHolder {
-  box-sizing: border-box;
-  display: flex;
-}
-.lightMode main .flexBoxHolderContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.lightMode main .flexBoxHolder > figure {
-  margin: 0;
-}
-.lightMode main .blockLink {
-  display: block;
-  text-decoration: none;
-  color: #302f30;
-}
-.lightMode main .imageBoxElement {
-  border-radius: 1vw;
-  transition: 0.5s ease-in-out;
-  align-items: center;
-  padding: 2vw;
-}
-.lightMode main .imageBoxElement:hover {
-  background-color: #a0a0a0;
-  box-shadow: 1px 5px 40px black;
-}
-.lightMode main .imageBoxElement > img {
-  max-width: 15vw;
-  max-height: 15vw;
-}
-.lightMode main .imageBoxElement > figcaption {
-  text-align: center;
-  max-width: 15vw;
-  padding: 5%;
-  font-size: 1rem;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main .experienceBlockHolder {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.lightMode main .titleAndPicture {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.lightMode main .titleAndPicture h2 {
-  margin-left: 20%;
-}
-.lightMode main .titleAndPicture > img {
-  border-radius: 33vw;
-  max-width: 20vw;
-  max-height: 20vh;
-}
-.lightMode main .dateFromTo {
-  margin: 0;
-  text-align: center;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main .experienceBlock {
-  animation: fadeIn 1s;
-  opacity: 0;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 80vw;
-  padding: 3vw;
-  background-color: #ede7e3;
-  border-radius: 50px;
-}
-.lightMode main .experienceBlock:target {
-  display: flex;
-  transition: 0.5s ease-in-out;
-  opacity: 1;
-}
-.lightMode main .controls {
-  color: #2d2d2a;
-  display: flex;
-  justify-content: center;
-}
-.lightMode main .leftButton {
-  transition: 0.5s ease-in-out;
-  font-size: 20vw;
-}
-.lightMode main .rightButton {
-  transition: 0.5s ease-in-out;
-  font-size: 20vw;
-}
-.lightMode main .leftButton:hover {
-  transition: 0.5s ease-in-out;
-  font-size: 25vw;
-}
-.lightMode main .rightButton:hover {
-  transition: 0.5s ease-in-out;
-  font-size: 25vw;
-}
-.lightMode main h1,
-.lightMode main h2 {
-  text-align: center;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main p {
-  margin: 1%;
-  font-size: x-large;
-  font-family: "Inter Tight", sans-serif;
-}
-.lightMode main .programmerBlock {
-  position: relative;
-  background-color: #2d2d2a;
-  margin-top: 5%;
-  border-radius: 1vw;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 1%;
-  height: 600px;
-  width: auto;
-}
-.lightMode main .positionBlock {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-.lightMode main .terminalText {
-  align-self: center;
-  color: #04f06a;
-  font-size: 3vw;
-  font-family: "Courier New", Courier, monospace;
-  white-space: pre;
-}
-.lightMode main #gitHubLogo {
-  display: flex;
-}
-.lightMode main #gitHubLogo img {
-  width: 10vw;
-  margin-left: 5%;
-  height: auto;
-}
-.lightMode main .contactContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.lightMode main .contact {
-  min-width: 40%;
-  display: flex;
-  padding: 0.5vw;
-  border-radius: 1vw;
-  transition: 0.5s ease-in-out;
-  background-color: #ede7e3;
-  min-width: 50vw;
-  max-height: 10vw;
-  align-items: center;
-  margin: 1vw;
-}
-.lightMode main .contact img {
-  max-width: 10vw;
-}
-.lightMode main .contact .contactLink {
-  text-align: center;
-  margin-left: auto;
-  margin-right: 10%;
-  font-size: 30px;
-  text-decoration: none;
-  font-family: "Inter Tight", sans-serif;
-  color: #171717;
-}
-.lightMode main .contact .contactLink:hover {
-  color: #757575;
-}
-.lightMode main .contact:hover {
-  transition: 0.5s ease-in-out;
-  box-shadow: 3px 3px 40px #171717;
+:root {
+  --textColour: #302f30;
+  --backgroundColour: #c1c1c1;
+  --altBackgroundColour: #ede7e3;
+  --hoverColour: #5c5b5b;
 }
 
-.darkMode {
-  background-color: #302f30;
-  color: #c1c1c1;
+body {
+  background-color: var(--backgroundColour);
+  color: var(--textColour);
 }
-.darkMode header {
+
+header {
+  background-color: var(--altBackgroundColour);
+  border-radius: 1vw;
   display: flex;
   justify-content: center;
   margin: 1vw;
   text-align: center;
-  align-content: center;
 }
-.darkMode header a {
-  text-align: center;
-  margin: 1vw;
-  font-size: large;
-  color: gray;
+header .navbarLinks {
+  margin-left: auto;
+  align-self: center;
+  font-size: 2.2rem;
+}
+header .navbarLinks > a {
+  padding: 1vw;
+  margin-right: 1vw;
+  border-radius: 1vw;
+  font-family: "Inter Tight", sans-serif;
   text-decoration: none;
+  color: var(--textColour);
+  transition: color 0.1s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+header .navbarLinks > a:hover {
+  color: var(--backgroundColour);
+  background-color: var(--hoverColour);
+}
+header .navbarLinks #cv {
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  border: 0.2vw solid #04f06a;
+  color: var(--textColour);
+  transition: background-color 0.5s ease-in-out;
+}
+header .navbarLinks #cv:hover {
+  color: #1d1d1d;
+  background-color: #04f06a;
+}
+header .headerLink {
   font-family: "Inter Tight", sans-serif;
+  color: var(--textColour);
+  text-decoration: none;
+  font-size: 4.5rem;
+  padding: 1vw;
+  margin: 2.5vw;
+  border-radius: 1vw;
+  transition: background-color 0.5s ease-in-out;
 }
-.darkMode header a:hover {
-  color: darkgrey;
-  text-decoration: underline;
+header .headerLink:hover {
+  background-color: var(--hoverColour);
+  color: var(--backgroundColour);
 }
-.darkMode header .headerLink {
-  font-family: "Inter Tight", sans-serif;
-  color: #c1c1c1;
-  font-size: 32px;
-}
-.darkMode .mobileHeader {
+
+.mobileHeader {
   display: none;
 }
+
+@media screen and (max-width: 1140px) {
+  .navbarLinks a {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 768px) {
-  .darkMode header {
+  header {
     display: none;
   }
-  .darkMode .mobileHeader {
+  .mobileHeader {
+    background-color: var(--backgroundColour);
     display: flex;
     align-items: flex-end;
     flex-direction: column;
   }
-  .darkMode .headerLinkMobile {
-    color: #c1c1c1;
-    font-size: 32px;
+  .headerLinkMobile {
+    color: var(--textColour);
+    font-family: "Inter Tight", sans-serif;
+    margin-right: 4vw;
+    font-size: 3rem;
     margin-bottom: 3vw;
+    text-decoration: none;
   }
-  .darkMode #links {
+  ion-icon {
+    margin-right: 4vw;
+  }
+  #links {
+    margin-right: 1vw;
     flex-direction: column;
     display: none;
     align-items: flex-end;
   }
-  .darkMode #dropDown {
-    color: #c1c1c1;
+  #links a {
+    text-decoration: none;
+    padding: 1vw;
+    margin: 1vw;
+    background-color: var(--altBackgroundColour);
+    border-radius: 1vw;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 23px;
+    color: var(--textColour);
+  }
+  #links #cv {
+    background-color: #04f06a;
+    color: #1d1d1d;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  #dropDown {
+    color: var(--textColour);
     font-size: 32px;
     border-radius: 1vw;
-    background-color: #757575;
+    background-color: var(--hoverColour);
     margin-bottom: 3vw;
   }
 }
-.darkMode main .headText {
+main .headText {
   text-align: center;
+  font-size: 1.75rem;
 }
-.darkMode main .switch {
+main .switch {
   position: relative;
   display: block;
   margin-right: 5%;
   margin-left: auto;
   width: 50px;
-  height: 25px;
-  background-color: #ede7e3;
-  border: 2px solid #c1c1c1;
+  height: 26px;
+  background-color: var(--backgroundColour);
+  border: 0.25vw solid var(--textColour);
   border-radius: 33vw;
 }
-.darkMode main .slider {
+main .boxLink {
+  text-decoration: none;
+  color: var(--textColour);
+}
+main .slider {
   display: inline-block;
-  background-color: #ede7e3;
-  height: 25px;
+  background-color: var(--textColour);
+  height: 26px;
   width: 26px;
-  margin-top: 0;
+  margin-left: 0.1%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50%;
 }
-.darkMode main .switch > input {
+main .switch > input {
   display: none;
   opacity: 0;
   height: 0;
   width: 0;
 }
-.darkMode main .switch > input:checked + .slider {
+main .switch > input:checked + .slider {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  background-color: #2d2d2a;
+  background-color: var(--textColour);
 }
-.darkMode main .sideBySidePicText {
+main .sideBySidePicText {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 1vw;
   flex-wrap: wrap;
 }
-.darkMode main .textPanel {
+main .textPanel {
+  font-size: 1.75rem;
   max-width: 50vw;
   text-align: center;
   justify-content: center;
   margin-bottom: 1vw;
   align-self: center;
 }
-.darkMode main .aboutTitle {
-  font-size: 32px;
+main .aboutTitle {
+  font-size: 3rem;
 }
 @keyframes fadeIn {
   0% {
@@ -476,128 +191,163 @@
     opacity: 1;
   }
 }
-.darkMode main #imageOfMe {
+main .moreAboutMeBox h1 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 3rem;
+}
+main #imageOfMe {
   animation: fadeIn 1s;
   transition: 0.5s;
   border-radius: 5%;
   max-width: 40vw;
   height: auto;
 }
-.darkMode main .moreAboutMeText {
+main .moreAboutMeText {
+  font-size: 1.75rem;
   margin-bottom: 2vw;
   line-height: 1.5em;
   text-align: center;
 }
-.darkMode main .container {
+main .container {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.darkMode main .container > div {
+main .container > div {
   flex-basis: 45vw;
 }
-.darkMode main .block {
+main .blockInfo {
+  display: flex;
+  flex-direction: column;
+}
+main .blockInfo > .blockLink {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 0.5vw;
+  padding: 1vw;
+  margin: auto;
+  text-decoration: none;
+  color: var(--textColour);
+  margin-top: 1vw;
+  text-align: center;
+  background-color: var(--backgroundColour);
+  transition: color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+main .blockInfo > .blockLink:hover {
+  background-color: var(--hoverColour);
+  color: #1d1d1d;
+  box-shadow: 1px 5px 40px black;
+}
+main .block {
   margin: 1vw;
   border-radius: 5%;
-  background-color: #171717;
+  background-color: var(--altBackgroundColour);
   transition: 500ms ease-in-out;
 }
-.darkMode main .block p {
+main .block p {
+  font-size: 2rem;
   padding: 2vw;
-  margin: 1vw;
 }
-.darkMode main .block .borderImg > img {
+main .block .borderImg > img {
   max-width: 45vw;
 }
 @media screen and (max-width: 768px) {
-  .darkMode main #imageOfMe {
+  main #imageOfMe {
     max-width: 90vw;
     margin: 1vw;
   }
-  .darkMode main .textPanel {
+  main .textPanel {
     max-width: 100vw;
   }
-  .darkMode main .block .borderImg > img {
+  main .switch {
+    border: 2.5px solid var(--textColour);
+  }
+  main .block .borderImg > img {
     max-width: 98vw;
   }
-  .darkMode main .programmerBlock {
+  main .programmerBlock {
     max-height: 25vh;
   }
-  .darkMode main .programmerBlock .terminalText {
+  main .programmerBlock .terminalText {
     font-size: 3.5vw;
   }
-  .darkMode main .experienceBlock {
+  main .experienceBlock {
     width: 80vw;
   }
+  main .experienceBlock p {
+    font-size: 2rem;
+  }
 }
-.darkMode main .block:hover {
-  box-shadow: 3px 3px 40px #171717;
+main .block:hover {
+  box-shadow: 3px 3px 40px #1d1d1d;
 }
-.darkMode main .flexBoxHolder {
+main .flexBoxHolder {
   box-sizing: border-box;
   display: flex;
 }
-.darkMode main .flexBoxHolderContainer {
+main .flexBoxHolderContainer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
+  gap: 0.5vw;
+  justify-content: center;
 }
-.darkMode main .flexBoxHolder > figure {
+main .flexBoxHolder > figure {
   margin: 0;
 }
-.darkMode main .blockLink {
-  display: block;
-  text-decoration: none;
-  color: #302f30;
-}
-.darkMode main .imageBoxElement {
+main .imageBoxElement {
   border-radius: 1vw;
   transition: 0.5s ease-in-out;
   align-items: center;
   padding: 2vw;
+  min-width: 100px;
+  max-width: 15vw;
 }
-.darkMode main .imageBoxElement:hover {
-  background-color: #171717;
+main .imageBoxElement:hover {
+  background-color: var(--altBackgroundColour);
   box-shadow: 1px 5px 40px black;
 }
-.darkMode main .imageBoxElement > img {
-  max-width: 15vw;
-  max-height: 15vw;
+main h1 {
+  font-size: 3rem;
 }
-.darkMode main .imageBoxElement > figcaption {
+main .imageBoxElement > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+main .imageBoxElement > figcaption {
   text-align: center;
   max-width: 15vw;
-  color: #a0a0a0;
   padding: 5%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main .experienceBlockHolder {
+main .experienceBlockHolder {
   display: flex;
   justify-content: center;
   align-content: center;
 }
-.darkMode main .titleAndPicture {
+main .titleAndPicture {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.darkMode main .titleAndPicture h2 {
+main .titleAndPicture h2 {
   margin-left: 20%;
 }
-.darkMode main .titleAndPicture > img {
+main .titleAndPicture > img {
   border-radius: 33vw;
   max-width: 20vw;
   max-height: 20vh;
 }
-.darkMode main .dateFromTo {
+main .dateFromTo {
+  font-size: 2rem;
   margin: 0;
   text-align: center;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main .experienceBlock {
+main .experienceBlock {
   animation: fadeIn 1s;
   opacity: 0;
   display: none;
@@ -605,49 +355,55 @@
   justify-content: center;
   max-width: 80vw;
   padding: 3vw;
-  background-color: #171717;
+  background-color: var(--altBackgroundColour);
   border-radius: 50px;
 }
-.darkMode main .experienceBlock:target {
+main .experienceBlock p {
+  font-size: 1.75rem;
+}
+main .experienceBlock h2 {
+  font-size: 2rem;
+}
+main .experienceBlock:target {
   display: flex;
   transition: 0.5s ease-in-out;
   opacity: 1;
 }
-.darkMode main .controls {
-  color: #171717;
+main .controls {
+  color: var(--textColour);
   display: flex;
   justify-content: center;
 }
-.darkMode main .leftButton {
+main .leftButton {
   transition: 0.5s ease-in-out;
-  font-size: 20vw;
+  font-size: 10rem;
 }
-.darkMode main .rightButton {
+main .rightButton {
   transition: 0.5s ease-in-out;
-  font-size: 20vw;
+  font-size: 10rem;
 }
-.darkMode main .leftButton:hover {
+main .leftButton:hover {
   transition: 0.5s ease-in-out;
-  font-size: 25vw;
+  font-size: 15rem;
 }
-.darkMode main .rightButton:hover {
+main .rightButton:hover {
   transition: 0.5s ease-in-out;
-  font-size: 25vw;
+  font-size: 15rem;
 }
-.darkMode main h1,
-.darkMode main h2 {
+main h1,
+main h2 {
   text-align: center;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main p {
+main p {
   margin: 1%;
   font-size: x-large;
   font-family: "Inter Tight", sans-serif;
 }
-.darkMode main .programmerBlock {
+main .programmerBlock {
   position: relative;
-  background-color: #2d2d2a;
-  margin-top: 5%;
+  background-color: #1d1d1d;
+  margin-top: 3%;
   border-radius: 1vw;
   margin-left: 5%;
   margin-right: 5%;
@@ -655,62 +411,62 @@
   height: 600px;
   width: auto;
 }
-.darkMode main .positionBlock {
+main .positionBlock {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
 }
-.darkMode main .terminalText {
+main .terminalText {
   align-self: center;
   color: #04f06a;
   font-size: 3vw;
   font-family: "Courier New", Courier, monospace;
   white-space: pre;
 }
-.darkMode main #gitHubLogo {
+main #gitHubLogo {
   display: flex;
 }
-.darkMode main #gitHubLogo img {
+main #gitHubLogo img {
   width: 10vw;
   margin-left: 5%;
   height: auto;
 }
-.darkMode main .contactContainer {
+main .contactContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.darkMode main .contact {
+main .contact {
   min-width: 40%;
   display: flex;
   padding: 0.5vw;
   border-radius: 1vw;
   transition: 0.5s ease-in-out;
-  background-color: #171717;
+  background-color: var(--altBackgroundColour);
   min-width: 50vw;
   max-height: 10vw;
   align-items: center;
   margin: 1vw;
 }
-.darkMode main .contact img {
+main .contact img {
   max-width: 10vw;
 }
-.darkMode main .contact .contactLink {
+main .contact .contactLink {
   text-align: center;
   margin-left: auto;
   margin-right: 10%;
   font-size: 30px;
   text-decoration: none;
   font-family: "Inter Tight", sans-serif;
-  color: #c1c1c1;
+  color: var(--textColour);
 }
-.darkMode main .contact .contactLink:hover {
-  color: #757575;
+main .contact .contactLink:hover {
+  color: var(--hoverColour);
 }
-.darkMode main .contact:hover {
+main .contact:hover {
   transition: 0.5s ease-in-out;
-  box-shadow: 3px 3px 40px #171717;
+  box-shadow: 3px 3px 40px #1d1d1d;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
