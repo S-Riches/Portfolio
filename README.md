@@ -25,5 +25,5 @@ A simple static website that showcases my skills, my projects, and my experience
     -   Chances are that Ive changed the css since you last visited the site, please clear your browsers cache and reload the site.
 -   'Are you going to keep changing the website?'
     -   Of course, i want to keep this website updated and current. I also want to use this repository as a way of showing how my skills have developed over time.
--   The CV button doesnt do anything
-    -   i am currently waiting feedback on my new CV design, and dont feel that my previous CV reflects my skills well enough - ill add a link to it as soon as i believe it to be ready to send to employers.
+-   'The CV button doesn't do anything?'
+    -   i am currently waiting feedback on my new CV design, and don't feel that my previous CV reflects my skills well enough - ill add a link to it as soon as i believe it to be ready to send to employers.
