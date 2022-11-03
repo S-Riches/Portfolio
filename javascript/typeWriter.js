@@ -47,7 +47,7 @@ async function cursorBlink() {
 async function fadeIn() {
     let logo = document.getElementById("gitHubLogo");
     let image = document.createElement("img");
-    let mobileHeader = document.getElementById("mobileHeader");
+    let mobileHeader = document.querySelector(".mobileHeader");
     let header = document.getElementById("header");
     image.setAttribute(
         "src",
