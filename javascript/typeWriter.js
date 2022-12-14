@@ -49,10 +49,7 @@ async function fadeIn() {
     let image = document.createElement("img");
     let mobileHeader = document.querySelector(".mobileHeader");
     let header = document.getElementById("header");
-    image.setAttribute(
-        "src",
-        "https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png"
-    );
+    image.setAttribute("src", "/ghlogo.png");
     image.setAttribute("alt", "github link");
     logo.appendChild(image);
     logo.style.opacity = "0";
